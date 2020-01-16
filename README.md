@@ -98,7 +98,7 @@
 
 		3. Using Object.create (): 
 
-			The Object.create() method creates a new object, using an existing object as the prototype of 				the newly created object.
+			The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 			Eg :
 				var obj1 = Object.create({}) 
 				var obj2 = Object.create(obj1);
@@ -150,11 +150,11 @@
 		
 			1. Block level:
 			
-				When variable declared with var keyword within block level scope, it is accessible 					from the global scope, but is hoisted with undefined value.
+				When variable declared with var keyword within block level scope, it is accessible from the global scope, but is hoisted with undefined value.
 				
 			2. Function level: 
 			
-				While, when variable declared with var keyword within the function scope, the 						variable has its scope limited to that function only.
+				While, when variable declared with var keyword within the function scope, the variable has its scope limited to that function only.
 
 ## 14. What is variable shadowing? 
 
@@ -164,14 +164,14 @@
 		function outer() {
 			var outerVar = 2;
 			function inner() {
-				var outerVar = 3; //inner function that can declare a variable with the same name because of 							 its new scope.
+				var outerVar = 3; //inner function that can declare a variable with the same name because of its new scope.
 				return outerVar*2; // local variable gets accessed here so value is 6
 			}
 		}
 
 ## 15. Explain Currying.
 
-	Currying is a process in which we can transform a function with multiple arguments into a sequence of nesting functions,each taking a single argument. The number of nested functions depends on the number of arguments 	   the curried function receives. Nested functions are closures.
+	Currying is a process in which we can transform a function with multiple arguments into a sequence of nesting functions,each taking a single argument. The number of nested functions depends on the number of arguments the curried function receives. Nested functions are closures.
 	Eg: 
 		Normal function : 
 		
@@ -223,8 +223,9 @@
 
 	Hoisting in JavaScript is a feature in which the interpreter moves the function and variable declarations to the top of their containing scope before code execution.
 
-	During compile phase, all the function and variable declarations are added to the memory inside a javascript data     structure called Lexical environment. So that they can be used even before they are actually declared in the source           code.
-	A lexical environment is a data structure that holds the mapping of the name of the variable or function and its     reference. (The reference would be actual object [including the function object] or primitive value).
+	During compile phase, all the function and variable declarations are added to the memory inside a javascript data structure called Lexical environment. So that they can be used even before they are actually declared in the source code.
+	
+	A lexical environment is a data structure that holds the mapping of the name of the variable or function and its reference. (The reference would be actual object [including the function object] or primitive value).
 	
 	Representation: 
 		LexicalEnvironment = {
@@ -252,7 +253,7 @@
 			 helloWorld: <helloWorld object>,
 		       }	
 
-	      3. When let, const and class are hoisted, JS doesn’t assigns any value to it, it will assign undefined only 		   when	the JS engine encounters the declaration or assignment code at runtime.
+	      3. When let, const and class are hoisted, JS doesn’t assigns any value to it, it will assign undefined only when	the JS engine encounters the declaration or assignment code at runtime.
 		 
 		 Eg:
 		    1. let & const : 
@@ -303,10 +304,10 @@
 		      
 ## 18. Explain Temporal Dead Zone.
         
-        A time span between variable creation and its initialization where they can’t be accessed is Temporal Dead Zone. This means we can’t access the variable before the JS engine evaluates its value at the place it was declared in the               source code. Temporal dead zone applies to class and variables declared with let, const keywords.
+        A time span between variable creation and its initialization where they can’t be accessed is Temporal Dead Zone. This means we can’t access the variable before the JS engine evaluates its value at the place it was declared in the  source code. Temporal dead zone applies to class and variables declared with let, const keywords.
 
 ## 19. Explain Higher order functions.
-	A higher-order function is a function that either *takes a function as one of its parameters or *returns another     function.
+	A higher-order function is a function that either *takes a function as one of its parameters or *returns another function.
 	
 	Eg: Array.map method is one of the most common higher-order functions. Array.map method takes a function that will be executed on every item in the array. Then it returns a modified copy of the original array.
 
@@ -413,7 +414,7 @@
 
       The JavaScript interpreter in a browser is implemented as a single thread.  When a browser first loads your script, it enters the global execution context by default. 
       
-      With the above example, the execution flow of code enters the global execution context, when it encounters firstName   method, it enters the firstName method and creates a new execution context which is specific and local to firstName           method which we have termed as firstName method’s execution context. Similarly, a new execution context is being             created, when the execution flow of code enters the secondName method and thirdName method.
+      With the above example, the execution flow of code enters the global execution context, when it encounters firstName method, it enters the firstName method and creates a new execution context which is specific and local to firstName method which we have termed as firstName method’s execution context. Similarly, a new execution context is being created, when the execution flow of code enters the secondName method and thirdName method.
 
       The execution context object is depicted as follows: 
 
@@ -504,11 +505,11 @@
 
 	Asynchronous Javascript execution:
 
-	    Asynchronous means - The code execution which is not executed in sequence. In other words a piece of code runs 	   separately from the main application thread notifying the calling thread of its completion, failure or progress. 
+	    Asynchronous means - The code execution which is not executed in sequence. In other words a piece of code runs separately from the main application thread notifying the calling thread of its completion, failure or progress. 
 
-	    Now a question can come “How Javascript can be single threaded and asynchronous both?” The answer is that the            asynchronous behavior used in the javascript code is not a part of JS language. They are built in the browser and            accessed through the browser APIs.
+	    Now a question can come “How Javascript can be single threaded and asynchronous both?” The answer is that the asynchronous behavior used in the javascript code is not a part of JS language. They are built in the browser and accessed through the browser APIs.
 
-	    Lets understand the architecture of the browser that has the main components involved in asynchronous javascript 	    code execution:
+	    Lets understand the architecture of the browser that has the main components involved in asynchronous javascript code execution:
 
 	    There are 4 main components involved here:
 
@@ -519,10 +520,12 @@
 
     	    Call stack: All function calls will form a stack of frames
 
-    	    WebAPIs: The WebAPIs are built into your web browser. They are not part of the Javascript language itself, 			     although they are built on top of the core Javascript language, which lets you to use them in your 		     Javascript code.
+    	    WebAPIs: The WebAPIs are built into your web browser. They are not part of the Javascript language itself, although they are built on top of the core Javascript language, which lets you to use them in your 		     Javascript code.
       		     Eg: Canvas API, Fetch API, Geolocation API, HTML Drag and Drop API, Service Workers API
 
-    	    Callback queue / message queue: The callback queue basically consists of all the callback functions in a queue. 			 For eg: The callback added in the setTimeout function will be placed in the callback queue.
+    	    Callback queue / message queue: The callback queue basically consists of all the callback functions in a queue. 
+	    
+	    	     Eg: The callback added in the setTimeout function will be placed in the callback queue.
 
 	    Lets take an example to understand this better: 
 
@@ -547,13 +550,13 @@
       
       2. The execution flow then adds the first statement to the call stack. i.e. console.log(‘Well Hello from the                    mainMethod! ’);
       
-      3. Once the message has been logged into the console, the execution flows moves to the next statement. In this case,   it is setTimeout method. As the setTimeout method has 0 milliseconds to wait for, irrespective of the duration, the          WebAPIs will start the timer that will wait for 0 milliseconds. 
+      3. Once the message has been logged into the console, the execution flows moves to the next statement. In this case,it is setTimeout method. As the setTimeout method has 0 milliseconds to wait for, irrespective of the duration, the WebAPIs will start the timer that will wait for 0 milliseconds. 
       
-      4. While the timer is running in the WebAPIs, the execution flow immediately moves to the next statement. i.e.                  console.log(‘Now this ends here!’)
+      4. While the timer is running in the WebAPIs, the execution flow immediately moves to the next statement. i.e. console.log(‘Now this ends here!’)
       
-      5. Once the timer is completed running the duration mentioned in the setTimeout method, i.e. 0 milliseconds, the       callback method is moved to the callback/ message queue, ready for execution. The execution order for queue is first          in first out i.e. FIFO
+      5. Once the timer is completed running the duration mentioned in the setTimeout method, i.e. 0 milliseconds, the callback method is moved to the callback/ message queue, ready for execution. The execution order for queue is first in first out i.e. FIFO
       
-      6. Now, the Event loop comes into the picture here. The job of the Event loop is to look into the call stack and       determine if the stack if empty or not. If the call stack is empty, it looks into the message queue to see if                there’s any pending callback waiting to be executed. Therefore, the Event loop will check if any of the frame is              present in the call stack, if yes, will wait till it gets executed, if no, will move the callback method from the            callback queue to the call stack for execution.
+      6. Now, the Event loop comes into the picture here. The job of the Event loop is to look into the call stack and determine if the stack if empty or not. If the call stack is empty, it looks into the message queue to see if there’s any pending callback waiting to be executed. Therefore, the Event loop will check if any of the frame is present in the call stack, if yes, will wait till it gets executed, if no, will move the callback method from the callback queue to the call stack for execution.
       
       7. The callback method is moved to call stack and is executed immediately. i.e. console.log(’They are not gona print me immediately!’)
       
@@ -592,7 +595,6 @@
 
 	As for this topic, let us only consider Global and function scope.
 
-
 	Eg: 
 
 		var first = ‘first’;
@@ -607,7 +609,7 @@
 
 	when demo() method is called, the global object is used as a context for the function call, therefore when the method  refers to this, it points to the global object.
 
-	The global object already has defined first named variable with the value first and therefore demo() would return     “first” as its value.
+	The global object already has defined first named variable with the value first and therefore demo() would return “first” as its value.
 
 	Now let us consider another example: 
 
@@ -626,7 +628,7 @@
 		console.log(this.first); //first
 		console.log(obj1.demo()); //object 1 first
 
-	Here, the “this” object in demo method will point to obj1 as obj1.demo() method was called. If there would have been another object obj2.demo(), the “this” object in demo method would point to obj2 context. No matter where the method  	   is found: in an object or its prototype. In a method call, this is always the object before the dot.
+	Here, the “this” object in demo method will point to obj1 as obj1.demo() method was called. If there would have been another object obj2.demo(), the “this” object in demo method would point to obj2 context. No matter where the method is found: in an object or its prototype. In a method call, this is always the object before the dot.
 
 
 ## 25. Explain Inheritance in javascript.
@@ -640,7 +642,6 @@
 	Inheritance in javascript is achieved using prototypes.
 
 	Before moving ahead, one important point to know is Everything in Javascript is an object. So if you define an entity using an object literal or function, it is an object eventually. 
-
 
 	Prototype: 
 
@@ -695,9 +696,9 @@
 
 		2. So, in programming terms, we can say that Vehicle is the base class and Car is the derived class.
 
-		3. There are two instances of Vehicle class - v1 and v2. So v1 and v2 will have all the properties accessible 			 that are defined in the Vehicle class. But v1 and v2 wont have copies of the inherited properties, rather 		      they would be pointing to the actual implementation of inherited properties of Vehicle class.
+		3. There are two instances of Vehicle class - v1 and v2. So v1 and v2 will have all the properties accessible that are defined in the Vehicle class. But v1 and v2 wont have copies of the inherited properties, rather  they would be pointing to the actual implementation of inherited properties of Vehicle class.
 
-		4. Similarly, c1 and c2 are instances of Car class. So c1 and c2 would be inheriting properties and behavior 			from Car, which in turn inherits properties and behavior from Vehicle.
+		4. Similarly, c1 and c2 are instances of Car class. So c1 and c2 would be inheriting properties and behavior from Car, which in turn inherits properties and behavior from Vehicle.
 
 
 	For Eg: This method is also called as pseudoclassical pattern.
@@ -875,13 +876,11 @@
 
 		1. Constructor design pattern.
 
-		 	In classical object oriented language, a constructor is a special function in a class that will 			initialize an object with default values.
+		 	In classical object oriented language, a constructor is a special function in a class that will initialize an object with default values.
 
-			Although Javascript does not supports native classes, but it does support constructors with the “new” 			      keyword. The function can be used as a constructor and the properties can be initialized with default 			    values.
+			Although Javascript does not supports native classes, but it does support constructors with the “new” keyword. The function can be used as a constructor and the properties can be initialized with default values.
 
 			Eg:
- 
-
 				function Vehicle(name, noOfWheels) {
 					this.name = name;
 					this.noOfWheels = noOfWheels;
@@ -908,8 +907,7 @@
 				1. Closures.
 				2. Access modifiers.
 			
-			A closure is a function with access to the parent scope, even after the parent function has been 			 returned. They help us to mimic the behavior of access specifiers through scoping. 
-			Javascript does not support access modifiers.
+			A closure is a function with access to the parent scope, even after the parent function has been returned. They help us to mimic the behavior of access specifiers through scoping. Javascript does not support access modifiers.
 
 			To implement Module pattern, IIFE is used. 
 
@@ -946,7 +944,7 @@
 
 		3. Revealing module pattern:
 
-			Revealing module pattern is an improvement to the module pattern. The difference is the entire logic 			     is written in the private scope of the module and simply expose the parts we want to be public by 				returning an anonymous object.
+			Revealing module pattern is an improvement to the module pattern. The difference is the entire logic is written in the private scope of the module and simply expose the parts we want to be public by returning an anonymous object.
 			We can also create alias when mapping private members to their corresponding public members.
 
 			To implement Revealing module pattern, IIFE is used.
@@ -987,7 +985,7 @@
 				
 		4. Singleton Pattern:
 
-			The Singleton pattern allows us create exactly one instance of a class. If the instance is already 			   created, return the old one.
+			The Singleton pattern allows us create exactly one instance of a class. If the instance is already created, return the old one.
 
 			To implement Singleton pattern, IIFE is used.
 
@@ -1017,7 +1015,7 @@
 				var instance2 = singleton.getConfig({ type: ’FourWheeler’, noOfWheels: ‘4’});
 				console.log(instance1) // returns the instance with type TwoWheeler
 
-			Once the instance has been created, any attempt to create another instance of same class would result 			      assigning the old instance to the new one. 
+			Once the instance has been created, any attempt to create another instance of same class would result  assigning the old instance to the new one. 
 
 			
 ## 29. Explain Modules.
@@ -1335,7 +1333,7 @@
 			var fruits = [“banana”,”orange”,”apple”,”mango”];
 			console.log(fruits.push(“kiwi”)); // 5
 
-	reduce() - reduces an array to a single value. It executes a provided function for each value of the array (from left 			 to right) and the return value of the function is stored in an accumulator.
+	reduce() - reduces an array to a single value. It executes a provided function for each value of the array (from left to right) and the return value of the function is stored in an accumulator.
 
 		Eg:
 			var numbers = [20,10,30];
@@ -1356,13 +1354,13 @@
 			var fruits = [“banana”,”orange”,”apple”,”mango”];
 			console.log(fruits.shift()); // banana
 
-	slice() - returns the selected elements in an array as a new array object, selects the elements starting at the given 			start argument and ends at, but does not include the given end argument.
+	slice() - returns the selected elements in an array as a new array object, selects the elements starting at the given start argument and ends at, but does not include the given end argument.
 
 		Eg:
 			var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 		console.log(fruits.slice(3, 4)); // Apple
 
-	sort() - sorts the items of an array. The sort order can be either alphabetic or numeric, or ascending/descending 		   order. The sort function will produce incorrect results for numbers. For eg: 25 > 100 because 2 > 1 (if 		    numbers are sorted as strings)
+	sort() - sorts the items of an array. The sort order can be either alphabetic or numeric, or ascending/descending order. The sort function will produce incorrect results for numbers. For eg: 25 > 100 because 2 > 1 (if 		    numbers are sorted as strings)
 
 		Eg:
 			var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
@@ -1405,7 +1403,7 @@
 				object1.defineProperty(object1, ‘prop1’, { value: 200, writable: true});
 				console.log(object1.value); // 200
 
-	entries() - returns an array of a given object’s own enumerable keys and their values in two separate arrays i.e. 		      [keys, values] in the same order as provided by a for…in loop.
+	entries() - returns an array of a given object’s own enumerable keys and their values in two separate arrays i.e. [keys, values] in the same order as provided by a for…in loop.
 			
 			Eg:
 				const object1= {
@@ -1415,7 +1413,7 @@
 
 				console.log(Object.entries(object1)); // [ [“a”,”b”], [“something”,42]]
 
-	freeze() - freezes an object and returns the same object. Freezing an object means (no existing property alteration, 			no new property addition, no prototype updation)
+	freeze() - freezes an object and returns the same object. Freezing an object means (no existing property alteration, no new property addition, no prototype updation)
 
 			Eg:
 				const obj = {
@@ -1486,7 +1484,7 @@
 				Object.freeze(obj);
 				console.log(object.isExtensible(obj)) //false
 
-	seal() - seals an object. (no new property addition, no prototype updation) Existing properties values can be 			 updated.
+	seal() - seals an object. (no new property addition, no prototype updation) Existing properties values can be 	updated.
 
 			Eg:
 				const obj = { kiwi: true};
@@ -1519,7 +1517,7 @@
   			}); //error -  cannot define property property1, object is not extensible.
 
 
-	hasOwnProperty() - prevents a boolean indicating whether the given property is own property of the object( not an 			     inherited one!)
+	hasOwnProperty() - prevents a boolean indicating whether the given property is own property of the object( not an inherited one!)
 
 			Eg:
 				const obj1 = {};

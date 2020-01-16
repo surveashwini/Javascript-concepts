@@ -2,13 +2,13 @@
 	JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers.It also lets us bring dynamic behavior to static html pages. JavaScript is also an Object based Programming language. The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.
   
 ## 2. What are JavaScript Data Types?
-Following are the JavaScript Data types:
-	•	Undefined
- 	•	Boolean
-	•	String
-	•	Symbol
-	•	Number
-	•	Object
+	Following are the JavaScript Data types:
+	*	Undefined
+ 	*	Boolean
+	*	String
+	*	Symbol
+	*	Number
+	*	Object
 
 ## 3. What is the difference between “undefined” and “NULL”?
 	undefined means a variable has been declared but has not yet been assigned a value. 
@@ -20,19 +20,19 @@ Also, undefined and null are two distinct types: undefined is a type itself (und
 	isNan function returns true if the argument is not a number otherwise it is false.
 
 ## 5.What are the features of JavaScript?
-	•	It is a lightweight, interpreted programming language.
-	•	It is designed for creating network-centric applications.
-	•	It is complementary to and integrated with Java.
-	•	It is an open and cross-platform scripting language.
+	*	It is a lightweight, interpreted programming language.
+	*	It is designed for creating network-centric applications.
+	*	It is complementary to and integrated with Java.
+	*	It is an open and cross-platform scripting language.
 
 ## 6. Is JavaScript a case-sensitive language?
-	Yes, JavaScript is a case sensitive language.  The language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters.
+	Yes, JavaScript is a case sensitive language.  The language keywords, variables, function names, and any other        		identifiers must always be typed with a consistent capitalization of letters.
 
 ## 7. What are the advantages of JavaScript?
-	•	Less server interaction − You can validate user input before sending the page off to the server. This saves server traffic, which means less load on your server.
-	•	Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to enter something.
-	•	Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or activates them via the keyboard.
-	•	Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a Rich Interface to your site visitors.
+	*Less server interaction − You can validate user input before sending the page off to the server. This saves server 		traffic, which means less load on your server.
+	*Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to    		enter something.
+	*Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or 		    activates them via the keyboard.
+	*Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a 		rich Interface to your site visitors.
 
 ## 8.Between JavaScript and an ASP script, which is faster?
 
@@ -55,151 +55,156 @@ Also, undefined and null are two distinct types: undefined is a type itself (und
 
 	  Javascript allows you to create objects by using following methods:
 
-				1. Using function as a class : 
-					function createInstanceFromClass(prop1, prop2) {
-						this.prop1 = prop1;
-						this.prop2 = prop2;
-						this.logInfo = function () {
-							console.log(this.prop1, this.prop2);
-						}
-					}
-					var obj1 = new createInstanceFromClass(‘testProp1’,’testProp2’);
-					obj1.logInfo();
+		1. Using function as a class : 
+			function createInstanceFromClass(prop1, prop2) {
+				this.prop1 = prop1;
+				this.prop2 = prop2;
+				this.logInfo = function () {
+					console.log(this.prop1, this.prop2);
+				}
+			}
+			var obj1 = new createInstanceFromClass(‘testProp1’,’testProp2’);
+			obj1.logInfo();
 
-				2. Using Object literals: 
-					var obj1 = { 
- 				       prop1 : “prop1”, 
- 				       prop2 : “prop2”, 
-				       logInfo : function() { 
-				            console.log(prop1, prop2); 
-				       } 
-			    	} 
-				obj1.prop2 = “Updated prop2”;
-				obj1.logInfo();
-			
-			3. Using Object.create (): 
-				
-				The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
-				Eg :
-					var obj1 = Object.create({}) 
-					var obj2 = Object.create(obj1);
+		2. Using Object literals: 
+			var obj1 = { 
+			       prop1 : “prop1”, 
+			       prop2 : “prop2”, 
+			       logInfo : function() { 
+				    console.log(prop1, prop2); 
+			       } 
+			} 
+			obj1.prop2 = “Updated prop2”;
+			obj1.logInfo();
+
+		3. Using Object.create (): 
+
+			The Object.create() method creates a new object, using an existing object as the prototype of 				the newly created object.
+			Eg :
+				var obj1 = Object.create({}) 
+				var obj2 = Object.create(obj1);
 
 		
 ## 12.Explain the difference between function expression and function declaration? 
 		
-			A function declaration is executed when it is invoked. Just like variable declarations must start with “var”, function declarations must begin with “function”
+	**A function declaration** is executed when it is invoked. Just like variable declarations must start with “var”, 	     function declarations must begin with “function”
 
-			Eg: 
-				function demoFunction() {
-					return true;
-				}
+	  Eg: 
+		function demoFunction() {
+			return true;
+		}
 
-			A function expression can be defined using an expression, it doesnt needs function name and is stored in a variable. They are always invoked with the variable name.
+	**A function expression** can be defined using an expression, it doesnt needs function name and is stored in a 		  variable. They are always invoked with the variable name.
 
-			Eg: 
+	  Eg: 
+		var x = function (a, b) {return a * b};	
+		
+	 **Benefits of each of one:** 
 			
-			var x = function (a, b) {return a * b};	
-		Benefits of each of one: 
-			Function declaration: 
-				Eg: (you need to refer hoisting concept of javascript explained in Q.17 to understand this example)
-					alert(foo()); //Doesnt throws error. Alerts 5. Declarations are loaded before any code can run.
-					function foo() { return 5; }
+		**Function declaration:**
+			Eg: (you need to refer hoisting concept of javascript explained in Q.17 to understand this example)
+
+			alert(foo()); //Doesnt throws error. Alerts 5. Declarations are loaded before any code can run.
+			function foo() { return 5; }
 			
-			Function expression: 
-				1. Currying
-				2.  Can be used as arguments to other functions
-				3. IIFE (Immediately invoked function expressions)
+		**Function expression:**
+			1. Currying
+			2.  Can be used as arguments to other functions
+			3. IIFE (Immediately invoked function expressions)
 
 ## 13.Explain scoping in Javascript?
-		Scoping means determining where variables, functions and objects are accessible in your code.
-		Types: 
-			1. Global
-			2. Local
-		Global:
-			A variable can be termed as global variable if its defined outside of a function. A global variable can be accessed           from any other scope.
-		Local: 
-			A variable can be termed as local variable if its defined inside a function. A local variable is accessed only within         the function in which they are defined. This allows us to create variables that have the same name and can be used in         different functions (also termed as variable shadowing). 
-			Types:
-				1. Block level:
-					When variable declared with var keyword within block level scope, it is accessible from the global scope, but is             hoisted with undefined value.
-				2. Function level: 
-					While, when variable declared with var keyword within the function scope, the variable has its scope limited to that function only.
+	Scoping means determining where variables, functions and objects are accessible in your code.
+	Types: 
+		1. Global
+		2. Local
+	Global:
+		A variable can be termed as global variable if its defined outside of a function. A global variable 			    can be accessed from any other scope.
+	Local: 
+		A variable can be termed as local variable if its defined inside a function. A local variable is 			 accessed only within the function in which they are defined. This allows us to create variables that 			      have the same name and can be used in different functions (also termed as variable shadowing). 
+
+		Types:
+			1. Block level:
+				When variable declared with var keyword within block level scope, it is accessible 					   from the global scope, but is hoisted with undefined value.
+			2. Function level: 
+				While, when variable declared with var keyword within the function scope, the 						variable has its scope limited to that function only.
 
 ## 14. What is variable shadowing? 
-	In JavaScript, variables with the same name can be specified at multiple layers of nested scope. In such case, local         variables gain priority over global variables. If you have a local variable and a global variable with the same name, the     local variable will take precedence when you use it inside a function. This type of behavior is called Variable shadowing.
+	In JavaScript, variables with the same name can be specified at multiple layers of nested scope. In such case, local         variables gain priority over global variables. If you have a local variable and a global variable with the same name, 	   the local variable will take precedence when you use it inside a function. This type of behavior is called Variable 		shadowing.
+	
 	Eg:
 		function outer() {
-				var outerVar = 2;
-				function inner() {
-					var outerVar = 3; // inner function that can redeclare a variable with the same name because of its new scope.
-					return outerVar *2; // local variable gets accessed here so value is 6
-				}
-			}
-
-## 15. Explain Currying.
-	Currying is a process in which we can transform a function with multiple arguments into a sequence of nesting functions,     each taking a single argument. The number of nested functions depends on the number of arguments the curried function         receives. Nested functions are closures.
-	Eg: 
-		Normal function : 
-		function mul(a, b, c) {
-			    return a * b * c;
-			}
-
-		Usage : mul(1,2,3);
-
-		Curried function: 
-		
-		function mul(a) {
-			return (b) => {
-				return (c) => {
-			        return a * b * c
- 				}
+			var outerVar = 2;
+			function inner() {
+				var outerVar = 3; // inner function that can redeclare a variable with the same name because of its new scope.
+				return outerVar *2; // local variable gets accessed here so value is 6
 			}
 		}
 
-		Usage : mul(1)(2)(3);
+## 15. Explain Currying.
+	Currying is a process in which we can transform a function with multiple arguments into a sequence of 			nesting functions,each taking a single argument. The number of nested functions depends on the number of arguments 	   the curried function receives. Nested functions are closures.
+	Eg: 
+		Normal function : 
+		
+			function mul(a, b, c) {
+				    return a * b * c;
+				}
+
+			Usage : mul(1,2,3);
+
+		Curried function: 
+		
+			function mul(a) {
+				return (b) => {
+					return (c) => {
+					return a * b * c
+					}
+				}
+			}
+
+			Usage : mul(1)(2)(3);
 
 
-		Benefits of currying:
+	**Benefits of currying:**
+	If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in 		     one place in the code, you can simply apply one or more parameters when you get them and pass the result to                   another piece of code that has more parameters and finish evaluating it there. 
 
-			If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to another piece of code that has more parameters and finish evaluating it there. 
-	
-Eg: Multiple API responses used as different arguments in a curried function to accomplish a particular task.
+	Eg: Multiple API responses used as different arguments in a curried function to accomplish a particular task.
 
 ## 16. What is a closure?
 	
-	A closure is an inner function that has access to the outer/enclosing function’s variables—scope chain. The closure has       three scope chains:
+	A closure is an inner function that has access to the outer/enclosing function’s variables—scope chain. The closure 	    has three scope chains:
 	1. It has access to its own scope (variables defined between its curly brackets)
-     2. It has access to the outer function’s variables
-     3. It has access to the global variables.
+        2. It has access to the outer function’s variables
+        3. It has access to the global variables.
 	4. It has access to the outer function’s parameters.
 		Eg:
-			function outer() {
-				var outerVar = 2;
-				return function() {
-					return outerVar *2; // inner function that has access to outer function’s variables.
-				}
+		function outer() {
+			var outerVar = 2;
+			return function() {
+				return outerVar *2; // inner function that has access to outer function’s variables.
 			}
-			var closureConcept = outer();
-			console.log(closureConcept()); // returns 4
+		}
+		var closureConcept = outer();
+		console.log(closureConcept()); // returns 4
 
 ## 17. Explain hoisting.
-			Hoisting in JavaScript is a feature in which the interpreter moves the function and variable declarations to the top of       their containing scope before code execution.
-			During compile phase, all the function and variable declarations are added to the memory inside a javascript data             structure called Lexical environment. So that they can be used even before they are actually declared in 	the source         code.
-			A lexical environment is a data structure that holds the mapping of the name of the variable or function and its             reference. (The reference would be actual object [including the function object] or primitive value).
-			Representation: 
-				LexicalEnvironment = {
-					Identifier:  <value>,
-					Identifier:  <function object>
-				}
-			All declarations (function, var, let, const and class) are hoisted in JavaScript.
+	Hoisting in JavaScript is a feature in which the interpreter moves the function and variable declarations to the top 	     of their containing scope before code execution.
+	During compile phase, all the function and variable declarations are added to the memory inside a javascript data             structure called Lexical environment. So that they can be used even before they are actually declared in the source           code.
+	A lexical environment is a data structure that holds the mapping of the name of the variable or function and its             reference. (The reference would be actual object [including the function object] or primitive value).
+	
+	**Representation:** 
+		LexicalEnvironment = {
+			Identifier:  <value>,
+			Identifier:  <function object>
+		}
+	All declarations (function, var, let, const and class) are hoisted in JavaScript.
       
-      1.	when var is hoisted, JS assigns an undefined value to it.
-      ⁃	Eg:
+      1.when var is hoisted, JS assigns an undefined value to it.
+      	Eg:
              console.log(a); // outputs 'undefined'
              var a = 3;
 
-      2.	when function is hoisted, JS assigns function reference to it.
-      ⁃	Eg:
+      2.when function is hoisted, JS assigns function reference to it.
+      	Eg:
             helloWorld();  // prints 'Hello World!' to the console
             function helloWorld() {
               console.log('Hello World!');
@@ -212,7 +217,7 @@ Eg: Multiple API responses used as different arguments in a curried function to 
                  helloWorld: <helloWorld object>,
                }	
 
-      3.	when let, const and class are hoisted, JS doesn’t assigns any value to it, it will assign undefined only when the         JS engine encounters the declaration or assignment code at runtime.
+      3.when let, const and class are hoisted, JS doesn’t assigns any value to it, it will assign undefined only when the           JS engine encounters the declaration or assignment code at runtime.
             ⁃	Eg:
             1. let & const : 
                  console.log(a , b); // ReferenceError: a, b is not defined
@@ -228,26 +233,29 @@ Eg: Multiple API responses used as different arguments in a curried function to 
                     this.name = name; 
                     }
                 }
-            NOTE: The lexical environment object looks like this for the above cases: 
+      	NOTE: The lexical environment object looks like this for the above cases: 
 
-						lexicalEnvironment = {
-							a: <uninitialized>,
-							b: <uninitialized>,
-							Person: <uninitialized>
-                               	}	 
+		lexicalEnvironment = {
+			a: <uninitialized>,
+			b: <uninitialized>,
+			Person: <uninitialized>
+		}	 
 
-		 4. Function expressions and class expressions are not hoisted.
-						Eg: 
-							funcExp();
-							var funcExp = function() {
-								console.log(“This wont work it will give an error”)
-							};
-        Precedence: 
+	4. Function expressions and class expressions are not hoisted.
+		Eg: 
+		funcExp();
+		var funcExp = function() {
+			console.log(“This wont work it will give an error”)
+		};
+		
+        **Precedence:** 
+	
           1. Variable assignment takes precedence over function declaration
             Eg: 
               var fun = 22;
               function fun() { console.log(“func 2”)}
               console.log(typeof fun) // number
+	      
           2. Function declarations take precedence over variable declarations.
             Eg: 	
               var fun;
@@ -258,79 +266,77 @@ Eg: Multiple API responses used as different arguments in a curried function to 
         A time span between variable creation and its initialization where they can’t be accessed is Temporal Dead Zone. This         means we can’t access the variable before the JS engine evaluates its value at the place it was declared in the               source code. Temporal dead zone applies to class and variables declared with let, const keywords.
 
 ## 19. Explain Higher order functions.
-				A higher-order function is a function that either *takes a function as one of its parameters or *returns another             function.
-				Eg:	Array.map method is one of the most common higher-order functions. Array.map method takes a function that will be         executed on every item in the array. Then it returns a modified copy of the original array.
+	A higher-order function is a function that either *takes a function as one of its parameters or *returns another             function.
+	Eg:Array.map method is one of the most common higher-order functions. Array.map method takes a function that will be         executed on every item in the array. Then it returns a modified copy of the original array.
 
-				function map(array, func) {
-					let copy = [];
-					for(let index = 0; index<array.length; i++) {
-						let original = array[index];
-						let modified = func(original);
-						copy[index] = modified;
-					}
-					return copy;
-				}
+	function map(array, func) {
+		let copy = [];
+		for(let index = 0; index<array.length; i++) {
+			let original = array[index];
+			let modified = func(original);
+			copy[index] = modified;
+		}
+		return copy;
+	}
 
 ## 20. What is IIFE?
-	
-		1. stands for Immediately invoked function expressions.
-		2. starts with a function expression followed by a pair of parenthesis to immediately invoke it.
-		
-		Different variation of IIFE - Eg:
-			
-			1. “!” symbol turns the following function into an expression
 
-				!function() {
+	1. stands for Immediately invoked function expressions.
+	2. starts with a function expression followed by a pair of parenthesis to immediately invoke it.
 
-                   alert("Hello”);
+	Different variation of IIFE - Eg:
 
-           }();
-			
-			2.  Parenthesis inside the expression.
+		1. “!” symbol turns the following function into an expression
 
-				(function() {
+			!function() {
 
-            alert("IIFE”);
+				   alert("Hello”);
 
-          }());
+			 }();
 
+		2.  Parenthesis inside the expression.
 
+			(function() {
 
-      3.  Outside Parenthesis
+			    alert("IIFE”);
+
+			 }());
+
+		3.  Outside Parenthesis
 
 
-        (function() {
+			(function() {
 
-            alert("IIFE”);
+			    alert("IIFE”);
 
-         })();
+			 })();
 
-      4.  IIFE with return values
+		4.  IIFE with return values
 
-         var result = (function() {
+			 var result = (function() {
 
-              return "IIFE";
+			      return "IIFE";
 
-          }());
+			  }());
 
-      5. IIFE with parameters
+		5. IIFE with parameters
 
-          (function IIFE(msg, times) {
+			  (function IIFE(msg, times) {
 
-              for (var i = 1; i <= times; i++) {
+			      for (var i = 1; i <= times; i++) {
 
-                    console.log(msg);
+				    console.log(msg);
 
-               }
+			       }
 
-           }("Hello!", 5));
+			   }("Hello!", 5));
 
 
 ## 21. Explain execution context and stack in JS.
 
       Execution context literally refers to scope. For eg:
 
-        var globalVar =5;  //global execution context
+        var globalVar = 5;  //global execution context
 
         function firstName(param1) {       // firstName method’s execution context
             var firstName1;
@@ -338,7 +344,6 @@ Eg: Multiple API responses used as different arguments in a curried function to 
             function firstNameFunction() {
               this.firstName1 = param1;
             }
-
 
             function secondName(param2) {      // secondName method’s execution context
                 var secondName1;
@@ -375,14 +380,14 @@ Eg: Multiple API responses used as different arguments in a curried function to 
         this: {}
       }
 
-    The execution context object gets created in 2 stages:
+    **The execution context object gets created in 2 stages:**
 
-    1. Creation stage - function is called but not executed
-    2. Activation stage - function is parsed and initialized with variable values.
+	    1. Creation stage - function is called but not executed
+	    2. Activation stage - function is parsed and initialized with variable values.
 
     The above example can be visualized in the two stages as follows:
 
-    Creation Stage: 
+    **Creation Stage:** 
 
         executionContextObject = {
           scopeChain: {….} , 
@@ -401,7 +406,7 @@ Eg: Multiple API responses used as different arguments in a curried function to 
         }
 
 
-    Activation Stage: 
+    **Activation Stage:** 
 
         executionContextObject = {
           scopeChain: {….} , 
@@ -423,46 +428,46 @@ Eg: Multiple API responses used as different arguments in a curried function to 
 
 	Javascript is a single threaded language i.e the execution follows line by line sequence.
 
-  Before jumping to asynchronous javascript, let us understand synchronous javascript execution.
+  	Before jumping to asynchronous javascript, let us understand synchronous javascript execution.
 
-	 ** Synchronous Javascript execution: **
+	** Synchronous Javascript execution: **
 
-      var secondMethod = () => {
-        console.log(’Second method is called first’);
-      }
+	      var secondMethod = () => {
+		console.log(’Second method is called first’);
+	      }
 
-      var firstMethod = () => {
-        console.log(‘First method is called first, but it is angry now’);
-        secondMethod();
-        console.log(‘lets not upset anyone anymore, End it!’);
-      }
+	      var firstMethod = () => {
+		console.log(‘First method is called first, but it is angry now’);
+		secondMethod();
+		console.log(‘lets not upset anyone anymore, End it!’);
+	      }
 
-      firstMethod();
+	      firstMethod();
 
-     The above code will be executed sequentially and would result in the following output: 
+        The above code will be executed sequentially and would result in the following output: 
 
-        First method is called then, but it is angry now
-        Second method is called first
-        lets not upset anyone anymore, End it!
+		First method is called then, but it is angry now
+		Second method is called first
+		lets not upset anyone anymore, End it!
 
 	** Asynchronous Javascript execution: ** 
 
-    Asynchronous means - The code execution which is not executed in sequence. In other words a piece of code runs separately     from the main application thread notifying the calling thread of its completion, failure or progress. 
+	    Asynchronous means - The code execution which is not executed in sequence. In other words a piece of code runs 	       separately from the main application thread notifying the calling thread of its completion, failure or progress. 
 
-    Now a question can come “How Javascript can be single threaded and asynchronous both?” The answer is that the                 asynchronous behavior used in the javascript code is not a part of JS language. They are built in the browser and             accessed through the browser APIs.
+	    Now a question can come “How Javascript can be single threaded and asynchronous both?” The answer is that the                 asynchronous behavior used in the javascript code is not a part of JS language. They are built in the browser and             accessed through the browser APIs.
 
-    Lets understand the architecture of the browser that has the main components involved in asynchronous javascript code         execution:
+	    Lets understand the architecture of the browser that has the main components involved in asynchronous javascript 		 code execution:
 
-    There are 4 main components involved here:
-    1. Call Stack
-    2. WebAPIs
-    3. Callback queue / message queue
-    4. Event loop
+	    There are 4 main components involved here:
+	    1. Call Stack
+	    2. WebAPIs
+	    3. Callback queue / message queue
+	    4. Event loop
 
-    Call stack: All function calls will form a stack of frames
+    	    **Call stack:** All function calls will form a stack of frames
 
-    WebAPIs: The WebAPIs are built into your web browser. They are not part of the Javascript language itself, although they     are built on top of the core Javascript language, which lets you to use them in your Javascript code.
-      Eg: Canvas API, Fetch API, Geolocation API, HTML Drag and Drop API, Service Workers API
+    	    **WebAPIs:** The WebAPIs are built into your web browser. They are not part of the Javascript language itself, 		although they are built on top of the core Javascript language, which lets you to use them in your Javascript 		     code.
+      		Eg: Canvas API, Fetch API, Geolocation API, HTML Drag and Drop API, Service Workers API
 
     Callback queue / message queue: The callback queue basically consists of all the callback functions in a queue. For eg:       the callback added in the setTimeout function will be placed in the callback queue.
 
@@ -505,84 +510,84 @@ Asynchronous behavior can be achieved by the following methods:
 		3. async/await
 
 
-23. What is method overloading and method overriding? Does Javascript supports it?
+## 23. What is method overloading and method overriding? Does Javascript supports it?
 
 	Method overloading - when two different methods have the same name but have different parameters list.
 
 	Eg: 
 
-	function add(n1, n2, n3 ) { return n1+ n2 + n3; }
+		function add(n1, n2, n3 ) { return n1+ n2 + n3; }
 
-	function add(n1, n2) { return n1+ n2; }
+		function add(n1, n2) { return n1+ n2; }
 
-	Javascript doesn’t supports method overloading. If such two methods are defined one by one, then the latest method definition is picked up when add method is called. 		This is nothing but method overriding.
+	Javascript doesn’t supports method overloading. If such two methods are defined one by one, then the latest method 	   definition is picked up when add method is called. This is nothing but method overriding.
 
 	To summarize, Javascript supports method overriding and not method overloading.
 
-24.  Explain ‘this’.
+## 24.  Explain ‘this’.
 	
 	‘this’ is an object whose value is determined by how a function is called.
 
-	To understand this concept more, let us re-visit the scopes concept. There are majorly two types of scope : Global and Local. Local can be block level or function level. 
+	To understand this concept more, let us re-visit the scopes concept. There are majorly two types of scope : Global 	   and Local. Local can be block level or function level. 
 
 	As for this topic, let us only consider Global and function scope.
 
 
 	Eg: 
 
-	var first = ‘first’;
+		var first = ‘first’;
 
-	function demo() {
-		var first = ‘functionFirst’;
-		return this.first;
-	}
+		function demo() {
+			var first = ‘functionFirst’;
+			return this.first;
+		}
 
-	console.log(this.first); // first
-	console.log(demo()); // first
+		console.log(this.first); // first
+		console.log(demo()); // first
 
-	when demo() method is called, the global object is used as a context for the function call, therefore when the method refers to this, it points to the global object.
+	when demo() method is called, the global object is used as a context for the function call, therefore when the method 	      refers to this, it points to the global object.
 
-	The global object already has defined first named variable with the value first and therefore demo() would return “first” as its value.
+	The global object already has defined first named variable with the value first and therefore demo() would return     	      “first” as its value.
 
 	Now let us consider another example: 
 
 	Eg: 
 
-	var first = “first”;
+		var first = “first”;
 
-	var obj1 = {
-		first: ‘object 1 first’,
-		demo: function() {
-			var first = ‘functionFirst’;
-			return this.first;
+		var obj1 = {
+			first: ‘object 1 first’,
+			demo: function() {
+				var first = ‘functionFirst’;
+				return this.first;
+			}
 		}
-	}
 
- 	console.log(this.first); //first
-	console.log(obj1.demo()); //object 1 first
+		console.log(this.first); //first
+		console.log(obj1.demo()); //object 1 first
 
-Here, the “this” object in demo method will point to obj1 as obj1.demo() method was called. If there would have been another object obj2.demo(), the “this” object in demo method would point to obj2 context. No matter where the method is found: in an object or its prototype. In a method call, this is always the object before the dot.
+	Here, the “this” object in demo method will point to obj1 as obj1.demo() method was called. If there would have been 	     another object obj2.demo(), the “this” object in demo method would point to obj2 context. No matter where the method  	   is found: in an object or its prototype. In a method call, this is always the object before the dot.
 
 
-25. Explain Inheritance in javascript.
+## 25. Explain Inheritance in javascript.
 
-	Inheritance in javascript refers to the ability of reusing the behavior defined in one class into another class, without needing to redefine it. 
+	Inheritance in javascript refers to the ability of reusing the behavior defined in one class into another class, 	 without needing to redefine it. 
 
 	For Eg:
 
-	An object has one method defined within it. Another object wants the same method to be able to access without needing it to redefine it in its own definition, to achieve this 		inheritance is used. 
+	An object has one method defined within it. Another object wants the same method to be able to access without needing 	      it to redefine it in its own definition, to achieve this inheritance is used. 
 
 	Inheritance in javascript is achieved using prototypes.
 
-	Before moving ahead, one important point to know is Everything in Javascript is an object. So if you define an entity using an object literal or function, it is an object eventually. 
+	Before moving ahead, one important point to know is Everything in Javascript is an object. So if you define an entity 	      using an object literal or function, it is an object eventually. 
 
 
 	Prototype: 
 
-	The prototype is an object that is associated with every functions and objects by default in javascript, where function’s prototype is accessible and modifiable and object’s prototype property is not visible. 
+		The prototype is an object that is associated with every functions and objects by default in javascript, 	where function’s prototype is accessible and modifiable and object’s prototype property is not visible. 
 	
-		Functions: 
-			Every function includes a prototype property that points to the prototype object of a base function or object (as ultimately everything in javascript is an object). The prototype object is an enumerable object to which additional properties can be attached to it, which will be shared across all the instances of its constructor function.
+	Functions: 
+		Every function includes a prototype property that points to the prototype object of a base function or object (as ultimately everything in javascript is an object). The prototype object is an enumerable object to which additional properties can be attached to it, which will be shared across all the instances of its constructor function.
 
 		Objects: 
 			Every object includes __proto__ property that points to prototype object of a function that created this object in the first place.

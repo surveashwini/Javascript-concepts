@@ -40,7 +40,7 @@
 
 	1. Less server interaction − You can validate user input before sending the page off to the server. This saves server  traffic, which means less load on your server.
 	
-	2. Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to   enter something.
+	2. Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to enter something.
 	
 	3. Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or  activates them via the keyboard.
 	
@@ -677,10 +677,10 @@
 		
 		var obj1 = new demo();	// implementing inheritance
 		console.log(obj1.prototype); // undefined
-		console.log(demo.prototype);  // returns an object containing constructor property 								      pointing to the actual method demo
-		console.log(demo === demo.prototype.constructor);  // true, as demo method is the return value of 									      demo.prototype.constructor.
+		console.log(demo.prototype);  // returns an object containing constructor property pointing to the actual method demo
+		console.log(demo === demo.prototype.constructor);  // true, as demo method is the return value of demo.prototype.constructor.
 		
-		Functions will have __proto__ property that would contain the native code.
+	Functions will have __proto__ property that would contain the native code.
 		
 	Prototypal inheritance can be demonstrated as follows:
 

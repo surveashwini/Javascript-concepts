@@ -38,13 +38,13 @@
 
 ## 7. What are the advantages of JavaScript?
 
-	1. Less server interaction − You can validate user input before sending the page off to the server. This saves server  traffic, which means less load on your server.
+ ***Less server interaction*** − You can validate user input before sending the page off to the server. This saves server  traffic, which means less load on your server.
 	
-	2. Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to enter something.
+ ***Immediate feedback to the visitors*** − They don’t have to wait for a page reload to see if they have forgotten to enter something.
 	
-	3. Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or  activates them via the keyboard.
+***Increased interactivity*** − You can create interfaces that react when the user hovers over them with a mouse or  activates them via the keyboard.
 	
-	4. Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a rich Interface to your site visitors.
+***Richer interfaces*** − You can use JavaScript to include such items as drag-and-drop components and sliders to give a rich Interface to your site visitors.
 
 ## 8.Between JavaScript and an ASP script, which is faster?
 
@@ -58,10 +58,10 @@
 
 	Breaking within a string statement can be done by the use of a backslash, '\', at the end of the first line
 	
-	  Eg:
+***Eg:***
 	      	  document.write("This is \a demo to show how to break a string using a backslash“);
 	      
-	  Eg:
+***Eg:***
 		  var a=1, b=2,
 		  c=
 		  a+b;
@@ -72,7 +72,7 @@
 
 	  Javascript allows you to create objects by using following methods:
 
-		1. Using function as a class : 
+***Using function as a class :*** 
 		
 			function createInstanceFromClass(prop1, prop2) {
 				this.prop1 = prop1;
@@ -84,7 +84,7 @@
 			var obj1 = new createInstanceFromClass(‘testProp1’,’testProp2’);
 			obj1.logInfo();
 
-		2. Using Object literals: 
+***Using Object literals: ***
 		
 			var obj1 = { 
 			       prop1 : “prop1”, 
@@ -96,7 +96,7 @@
 			obj1.prop2 = “Updated prop2”;
 			obj1.logInfo();
 
-		3. Using Object.create (): 
+***Using Object.create (): ***
 
 			The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 			Eg :
@@ -118,7 +118,7 @@
 	  Eg: 
 		var x = function (a, b) {return a * b};	
 		
-	Benefits of each of one:
+***Benefits of each of one:***
 			
 		Function declaration:
 		
@@ -136,31 +136,29 @@
 
 	Scoping means determining where variables, functions and objects are accessible in your code.
 	
-	Types: 
+***Types:***
 		1. Global
 		2. Local
 		
-	Global:
+***Global:***
 		A variable can be termed as global variable if its defined outside of a function. A global variable can be accessed from any other scope.
 		
-	Local: 
+***Local:***
 		A variable can be termed as local variable if its defined inside a function. A local variable is accessed only within the function in which they are defined. This allows us to create variables that have the same name and can be used in different functions (also termed as variable shadowing).
 
-		Types:
+***Types:***
 		
-			1. Block level:
-			
-				When variable declared with var keyword within block level scope, it is accessible from the global scope, but is hoisted with undefined value.
+   ***Block level:***
+	When variable declared with var keyword within block level scope, it is accessible from the global scope, but is hoisted with undefined value.
 				
-			2. Function level: 
-			
-				While, when variable declared with var keyword within the function scope, the variable has its scope limited to that function only.
+   ***Function level:***
+	While, when variable declared with var keyword within the function scope, the variable has its scope limited to that function only.
 
 ## 14. What is variable shadowing? 
 
 	In JavaScript, variables with the same name can be specified at multiple layers of nested scope. In such case, local variables gain priority over global variables. If you have a local variable and a global variable with the same name,the local variable will take precedence when you use it inside a function. This type of behavior is called Variable shadowing.
 	
-	Eg:
+***Eg:***
 		function outer() {
 			var outerVar = 2;
 			function inner() {
@@ -194,8 +192,8 @@
 			Usage : mul(1)(2)(3);
 
 
-	
-  ** Benefits of currying: **  
+
+ ***Benefits of currying:***  
 	
 		If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to another piece of code that has more parameters and finish evaluating it there. 
 
@@ -287,7 +285,7 @@
 				console.log(“This wont work it will give an error”)
 			};
 		
-        Precedence:
+***Precedence:***
 	
           1. Variable assignment takes precedence over function declaration
 	  
@@ -326,7 +324,7 @@
 	1. stands for Immediately invoked function expressions.
 	2. starts with a function expression followed by a pair of parenthesis to immediately invoke it.
 
-	Different variation of IIFE - 
+***Different variation of IIFE -*** 
 	Eg:
 
 		1. “!” symbol turns the following function into an expression
@@ -433,14 +431,14 @@
 		this: {}
 	      }
 
-    The execution context object gets created in 2 stages:
+***The execution context object gets created in 2 stages:***
 
 	    1. Creation stage - function is called but not executed
 	    2. Activation stage - function is parsed and initialized with variable values.
 
     The above example can be visualized in the two stages as follows:
 
-    Creation Stage: 
+***Creation Stage:***
 
         executionContextObject = {
           scopeChain: {….} , 
@@ -459,7 +457,7 @@
         }
 
 
-    Activation Stage: 
+***Activation Stage:***
 
         executionContextObject = {
           scopeChain: {….} , 
@@ -483,7 +481,7 @@
 
   	Before jumping to asynchronous javascript, let us understand synchronous javascript execution.
 
-	Synchronous Javascript execution:
+***Synchronous Javascript execution:***
 
 	      var secondMethod = () => {
 		console.log(’Second method is called first’);
@@ -503,7 +501,7 @@
 		Second method is called first
 		lets not upset anyone anymore, End it!
 
-	Asynchronous Javascript execution:
+***Asynchronous Javascript execution:***
 
 	    Asynchronous means - The code execution which is not executed in sequence. In other words a piece of code runs separately from the main application thread notifying the calling thread of its completion, failure or progress. 
 
@@ -511,22 +509,22 @@
 
 	    Lets understand the architecture of the browser that has the main components involved in asynchronous javascript code execution:
 
-	    There are 4 main components involved here:
+***There are 4 main components involved here:***
 
 	    1. Call Stack
 	    2. WebAPIs
 	    3. Callback queue / message queue
 	    4. Event loop
 
-    	    Call stack: All function calls will form a stack of frames
+***Call stack:*** All function calls will form a stack of frames
 
-    	    WebAPIs: The WebAPIs are built into your web browser. They are not part of the Javascript language itself, although they are built on top of the core Javascript language, which lets you to use them in your Javascript code.
+***WebAPIs:*** The WebAPIs are built into your web browser. They are not part of the Javascript language itself, although they are built on top of the core Javascript language, which lets you to use them in your Javascript code.
 	    
-      		     Eg: Canvas API, Fetch API, Geolocation API, HTML Drag and Drop API, Service Workers API
+	     Eg: Canvas API, Fetch API, Geolocation API, HTML Drag and Drop API, Service Workers API
 
-    	    Callback queue / message queue: The callback queue basically consists of all the callback functions in a queue. 
+***Callback queue / message queue:*** The callback queue basically consists of all the callback functions in a queue. 
 	    
-	    	     Eg: The callback added in the setTimeout function will be placed in the callback queue.
+	     Eg: The callback added in the setTimeout function will be placed in the callback queue.
 
 	    Lets take an example to understand this better: 
 
@@ -540,12 +538,12 @@
 
 		    mainMethod();
 
-    Architecture of the browser: 
+***Architecture of the browser:*** 
 
 
  ￼
 
-    Execution work flow: 
+***Execution work flow:*** 
 
       1. Firstly, when mainMethod() is called, it is pushed to the callStack as the first frame.
       
@@ -576,7 +574,7 @@
 
 ## 23. What is method overloading and method overriding? Does Javascript supports it?
 
-	Method overloading - when two different methods have the same name but have different parameters list.
+***Method overloading -*** when two different methods have the same name but have different parameters list.
 
 	Eg: 
 
@@ -636,7 +634,7 @@
 
 	Inheritance in javascript refers to the ability of reusing the behavior defined in one class into another class,  without needing to redefine it. 
 
-	For Eg:
+***For Eg:***
 
 	An object has one method defined within it. Another object wants the same method to be able to access without needing it to redefine it in its own definition, to achieve this inheritance is used. 
 
@@ -644,20 +642,20 @@
 
 	Before moving ahead, one important point to know is Everything in Javascript is an object. So if you define an entity using an object literal or function, it is an object eventually. 
 
-	Prototype: 
+***Prototype:*** 
 
 		The prototype is an object that is associated with every functions and objects by default in javascript,where function’s prototype is accessible and modifiable and object’s prototype property is not visible. 
 	
-	Functions: 
+***Functions:*** 
 		Every function includes a prototype property that points to the prototype object of a base function or object (as ultimately everything in javascript is an object). The prototype object is an enumerable object to which additional properties can be attached to it, which will be shared across all the instances of its constructor function.
 
-	Objects: 
+***Objects:*** 
 		Every object includes __proto__ property that points to prototype object of a function that created this object in the first place.
 
       
-      Now, Let us understand how inheritance can be achieved with object and with functions.
+Now, Let us understand how inheritance can be achieved with object and with functions.
 
-	Objects:
+***Objects:***
 
 		var obj1 = {};
 
@@ -669,7 +667,7 @@
 		
 		Objects will not have prototype property.
 	
-	Functions: 
+***Functions:*** 
 
 		function demo() {
 			return true;
@@ -702,7 +700,7 @@
 		4. Similarly, c1 and c2 are instances of Car class. So c1 and c2 would be inheriting properties and behavior from Car, which in turn inherits properties and behavior from Vehicle.
 
 
-	For Eg: This method is also called as pseudoclassical pattern.
+***For Eg: This method is also called as pseudoclassical pattern.***
 
 	function Vehicle(vehicleCategory) {
 
@@ -799,7 +797,7 @@
 
 	The objects are copied by reference, i.e. object, array and function.
 	
-	Primitive assignment: 
+***Primitive assignment:*** 
 
 		For eg: 
 
@@ -811,7 +809,7 @@
 
 		console.log(b); //  outputs 10 as the assignment was done by value
 
-	Non-primitive assignment: 
+***Non-primitive assignment:*** 
 	
 		For eg: 
 
@@ -831,7 +829,7 @@
 
 	Here, we are creating a new instance of Promise and passing an executor function. The executor function is passed with arguments resolve and reject.  Resolve is used to indicate the successful completion of the asynchronous function. On the other hand, reject is used to indicate that the asynchronous function execution failed. 
 
-		Eg:
+***Eg:***
 
 		Let us understand how a promise is being created.
 
@@ -875,198 +873,198 @@
 
 	There are multiple design patterns but here we will be covering only 4 design patterns:
 
-		1. Constructor design pattern.
+***1. Constructor design pattern.***
 
-		 	In classical object oriented language, a constructor is a special function in a class that will initialize an object with default values.
+	In classical object oriented language, a constructor is a special function in a class that will initialize an object with default values.
 
-			Although Javascript does not supports native classes, but it does support constructors with the “new” keyword. The function can be used as a constructor and the properties can be initialized with default values.
+	Although Javascript does not supports native classes, but it does support constructors with the “new” keyword. The function can be used as a constructor and the properties can be initialized with default values.
 
-			Eg:
-				function Vehicle(name, noOfWheels) {
-					this.name = name;
-					this.noOfWheels = noOfWheels;
+		Eg:
+			function Vehicle(name, noOfWheels) {
+				this.name = name;
+				this.noOfWheels = noOfWheels;
 
+			}
+
+		// Instead of defining the isCar method in the function definition, we are associating it   with the Vehicle’s prototype, this will share only one copy of isCar across all instances of Vehicle, i.e. bmw and activa.
+
+			Vehicle.prototype.isCar = function() {
+				console.log(this.noOfWheels === 4 ? “Yes”: “No”);
+			}	
+
+			var bmw = new Vehicle(“bmw”,4);
+
+			var activa = new Vehicle(“activa”,2)
+
+			bmw.isCar();         // Yes	
+			activa.isCar();       // No
+
+***2. Module pattern : ***
+
+	 So before deep diving into Module pattern, we need to understand two concepts:
+
+		1. Closures.
+		2. Access modifiers.
+
+	A closure is a function with access to the parent scope, even after the parent function has been returned. They help us to mimic the behavior of access specifiers through scoping. Javascript does not support access modifiers.
+
+	To implement Module pattern, IIFE is used. 
+
+	Eg:
+
+		var moduleDemo = (function(){
+
+			var privateArr = [1,2,3,4,5];
+
+			return {
+				addValue : function(value) {
+					privateArr.push(value);
+					console.log(privateArr)
+				},
+				removeValue: function(value) {
+					privateArr = privateArr.filter(function(val) {
+						return value!==val;
+					})
+					console.log(privateArr)
+				},
+				getValues: function() {
+					return privateArr;
 				}
+			}
+		})();
 
-				// Instead of defining the isCar method in the function definition, we are associating it   with the Vehicle’s prototype, this will share only one copy of isCar across all instances of Vehicle, i.e. bmw and activa.
- 
-				Vehicle.prototype.isCar = function() {
-					console.log(this.noOfWheels === 4 ? “Yes”: “No”);
-				}	
-	
-				var bmw = new Vehicle(“bmw”,4);
 
-				var activa = new Vehicle(“activa”,2)
+		moduleDemo.addValue(6);
+		moduleDemo.removeValue(1);
+		moduleDemo.getValues();
+		console.log(moduleDemo.privateArr); // privateVar wont be accessible here as the IIFE is already returned here. Although the closures addValue, removeValue and getValues are still able to access the privateVar of IIFE.
 
-				bmw.isCar();         // Yes
-				activa.isCar();       // No
+		Module pattern introduces the separation of private and public parts of an object.
 
-		2. Module pattern : 
+***3. Revealing module pattern:***
 
-			 So before deep diving into Module pattern, we need to understand two concepts:
+	Revealing module pattern is an improvement to the module pattern. The difference is the entire logic is written in the private scope of the module and simply expose the parts we want to be public by returning an anonymous object.
+	We can also create alias when mapping private members to their corresponding public members.
 
-				1. Closures.
-				2. Access modifiers.
-			
-			A closure is a function with access to the parent scope, even after the parent function has been returned. They help us to mimic the behavior of access specifiers through scoping. Javascript does not support access modifiers.
+	To implement Revealing module pattern, IIFE is used.
 
-			To implement Module pattern, IIFE is used. 
+	Eg:
 
-			Eg:
+		var moduleDemo = (function(){
 
-				var moduleDemo = (function(){
+			var privateArr = [1,2,3,4,5];
+
+			function addValue(value) {
+				privateArr.push(value);
+				console.log(privateArr)
+			}
+
+			function removeValue(value) {
+				privateArr = privateArr.filter(function(val) {
+					return value!==val;
+				})
+				console.log(privateArr)
+			}
+
+			function getValues() {
+				return privateArr;
+			}
+
+			return {
+				add: addValue,
+				remove: removeValue,
+				get: getValues
+			}
+		})();
+
+
+		moduleDemo.add(6);
+		moduleDemo.remove(1);
+		moduleDemo.get();
 				
-					var privateArr = [1,2,3,4,5];
+***4. Singleton Pattern:***
 
-					return {
-						addValue : function(value) {
-							privateArr.push(value);
-							console.log(privateArr)
-						},
-						removeValue: function(value) {
-							privateArr = privateArr.filter(function(val) {
-								return value!==val;
-							})
-							console.log(privateArr)
-						},
-						getValues: function() {
-							return privateArr;
-						}
-					}
-				})();
-				
+	The Singleton pattern allows us create exactly one instance of a class. If the instance is already created, return the old one.
 
-				moduleDemo.addValue(6);
-				moduleDemo.removeValue(1);
-				moduleDemo.getValues();
-				console.log(moduleDemo.privateArr); // privateVar wont be accessible here as the IIFE is already returned here. Although the closures addValue, removeValue and getValues are still able to access the privateVar of IIFE.
+	To implement Singleton pattern, IIFE is used.
 
-				Module pattern introduces the separation of private and public parts of an object.
+	Eg:
 
-		3. Revealing module pattern:
+		var singleton = (function(){
+			var config;
 
-			Revealing module pattern is an improvement to the module pattern. The difference is the entire logic is written in the private scope of the module and simply expose the parts we want to be public by returning an anonymous object.
-			We can also create alias when mapping private members to their corresponding public members.
+			function initializeConfig(values) {
+				this.id = Math.random();
+				this.type = values.type || ‘Car’;
+				this.noOfWheels = values.noOfWheels || 4; 
+			}
 
-			To implement Revealing module pattern, IIFE is used.
+			return {
+				getConfig: function(values) {
+					if(config === undefined) {
+						config = new initializeConfig(values);
+					} 
+					return config;
+				}
+			}
+		})();
 
-			Eg:
+		var instance1 = singleton.getConfig({ type: ’TwoWheeler’, noOfWheels: ‘2’});
+		console.log(instance1) // returns the instance with type TwoWheeler
+		var instance2 = singleton.getConfig({ type: ’FourWheeler’, noOfWheels: ‘4’});
+		console.log(instance1) // returns the instance with type TwoWheeler
 
-				var moduleDemo = (function(){
-				
-					var privateArr = [1,2,3,4,5];
-
-					function addValue(value) {
-						privateArr.push(value);
-						console.log(privateArr)
-					}
-
-					function removeValue(value) {
-						privateArr = privateArr.filter(function(val) {
-							return value!==val;
-						})
-						console.log(privateArr)
-					}
-					
-					function getValues() {
-						return privateArr;
-					}
-
-					return {
-						add: addValue,
-						remove: removeValue,
-						get: getValues
-					}
-				})();
-				
-
-				moduleDemo.add(6);
-				moduleDemo.remove(1);
-				moduleDemo.get();
-				
-		4. Singleton Pattern:
-
-			The Singleton pattern allows us create exactly one instance of a class. If the instance is already created, return the old one.
-
-			To implement Singleton pattern, IIFE is used.
-
-			Eg:
-
-				var singleton = (function(){
-					var config;
-
-					function initializeConfig(values) {
-						this.id = Math.random();
-						this.type = values.type || ‘Car’;
-						this.noOfWheels = values.noOfWheels || 4; 
-					}
-
-					return {
-						getConfig: function(values) {
-							if(config === undefined) {
-								config = new initializeConfig(values);
-							} 
-							return config;
-						}
-					}
-				})();
-
-				var instance1 = singleton.getConfig({ type: ’TwoWheeler’, noOfWheels: ‘2’});
-				console.log(instance1) // returns the instance with type TwoWheeler
-				var instance2 = singleton.getConfig({ type: ’FourWheeler’, noOfWheels: ‘4’});
-				console.log(instance1) // returns the instance with type TwoWheeler
-
-			Once the instance has been created, any attempt to create another instance of same class would result  assigning the old instance to the new one. 
+	Once the instance has been created, any attempt to create another instance of same class would result  assigning the old instance to the new one. 
 
 			
 ## 29. Explain Modules.
 
-		Modules are small units of independent, reusable code that is desired to be used as building blocks in creating a JS application. Modules lets us define public and private members separately. To understand how modules can be implemented with ES6 syntax, refer the ES6 documentation.
-		
-		Before ES6, modules can be defined with simple functions / IIFE:
+	Modules are small units of independent, reusable code that is desired to be used as building blocks in creating a JS application. Modules lets us define public and private members separately. To understand how modules can be implemented with ES6 syntax, refer the ES6 documentation.
 
-		Eg: Demonstrating modules with IIFE
+	Before ES6, modules can be defined with simple functions / IIFE:
 
-			var modulesDemo = (function(){
-				
-					var privateArr = [];
+	Eg: Demonstrating modules with IIFE
 
-					function addValue(value) {
-						privateArr.push(value);
-						console.log(privateArr)
-					}
+		var modulesDemo = (function(){
 
-					function removeValue(value) {
-						privateArr = privateArr.filter(function(val) {
-							return value!==val;
-						})
-						console.log(privateArr)
-					}
-					
-					function getValues() {
-						return privateArr;
-					}
+				var privateArr = [];
 
-					return {
-						add: addValue,
-						remove: removeValue,
-						get: getValues
-					}
-				})();
-				
+				function addValue(value) {
+					privateArr.push(value);
+					console.log(privateArr)
+				}
 
-				modulesDemo.add(6);
-				modulesDemo.remove(1);
-				modulesDemo.get();
-				 
+				function removeValue(value) {
+					privateArr = privateArr.filter(function(val) {
+						return value!==val;
+					})
+					console.log(privateArr)
+				}
 
-		Here, we cannot access the methods add, remove and get without modulesDemo variable. Also, once the IIFE is returned, only add, remove and get methods can be accessed, but the local variable privateArr cannot be accessed, which plays a role of private variable here.
+				function getValues() {
+					return privateArr;
+				}
+
+				return {
+					add: addValue,
+					remove: removeValue,
+					get: getValues
+				}
+			})();
+
+
+			modulesDemo.add(6);
+			modulesDemo.remove(1);
+			modulesDemo.get();
+
+
+	Here, we cannot access the methods add, remove and get without modulesDemo variable. Also, once the IIFE is returned, only add, remove and get methods can be accessed, but the local variable privateArr cannot be accessed, which plays a role of private variable here.
 
 ## 30. Explain DOM and BOM
 
 	DOM stands for Document object model. It is a standard defined by W3C. When a webpage is loaded, the browser creates a DOM of the page.The HTML DOM is constructed as a tree of objects(nodes). DOM tree can be accessed and manipulated with Javascript. The HTML DOM is a standard for how to get,change, add, or delete HTML elements.
 
-        DOM Tree nodes types:
+   ***DOM Tree nodes types:***
 
 		1. Document - represents the HTML document.
 		2. Element - represents an HTML element.
@@ -1089,14 +1087,14 @@
 
 ## 31. Explain Event bubbling and Event capturing.
 
-	Events:  Functionally speaking, when a user interacts with a webpage an event occurs. For eg: clicking on a search button, selecting a menu or typing into an input box of a form. All these interactions are considered as events. Javascript provides us ways to catch these events and add behavior to the application in response to these events.
+   ***Events:***  Functionally speaking, when a user interacts with a webpage an event occurs. For eg: clicking on a search button, selecting a menu or typing into an input box of a form. All these interactions are considered as events. Javascript provides us ways to catch these events and add behavior to the application in response to these events.
 
-	Event flow: Event flow is the order in which the event is received on the web page. There are two types of event flow:
+   ***Event flow:*** Event flow is the order in which the event is received on the web page. There are two types of event flow:
 
 		1. Top to bottom (Event capturing)
 		2. Bottom to top (Event bubbling)
 		
-	Event Capturing: Event Capturing is the event starts from the top element to target element.
+   ***Event Capturing:*** Event Capturing is the event starts from the top element to target element.
 
 	For Instance, if you click on an element (for instance button ), the click event of the window object will be fired first followed by the click event of the button.
 	
@@ -1139,7 +1137,7 @@
 	
 
 
-	Event Bubbling: Event bubbling is the event starts from the target element to its parents, i.e. from bottom to top. 
+   ***Event Bubbling:*** Event bubbling is the event starts from the target element to its parents, i.e. from bottom to top. 
 
 	For Eg: You have elements structured as follows, 
 
@@ -1174,15 +1172,15 @@
 	</body>
 	</html>
 
-	StopPropagation: It stops the event from bubbling to the parent elements.
+   ***StopPropagation:*** It stops the event from bubbling to the parent elements.
 
 	Syntax: 
 		event.stopPropagation();
 
-	StopImmediatePropagation: A single element may have multiple event handlers associated with it. So to prevent any of the event handlers to execute, stopImmediatePropagation is used.
+   ***StopImmediatePropagation:*** A single element may have multiple event handlers associated with it. So to prevent any of the event handlers to execute, stopImmediatePropagation is used.
 
-		Syntax: 
-			event.stopImmediatePropagation();
+	Syntax: 
+		event.stopImmediatePropagation();
 
 ## 32. Explain Memoization
 
@@ -1213,7 +1211,7 @@
 
 ## 33. Array methods that you should know.
 
-	concat() - Joins two or more arrays, returns a copy of joined arrays.
+***concat() -*** Joins two or more arrays, returns a copy of joined arrays.
 
 		Eg:
 
@@ -1222,7 +1220,7 @@
 			var children = array1.concat(array2);
 
 			
-	every() - checks if every element in an array pass a test. If it finds an array element which fails the test, every() returns false and stops execution else returns true
+***every() -*** checks if every element in an array pass a test. If it finds an array element which fails the test, every() returns false and stops execution else returns true
 				
 		Eg: 
 			var ages = [1,22,33,4,55];
@@ -1231,7 +1229,7 @@
 			})
 			console.log(everyResult); // true
 				
-	fill() - fills the elements in an array with a static value.
+***fill() -*** fills the elements in an array with a static value.
 				
 		Eg: 
 
@@ -1239,7 +1237,7 @@
 			alphabets.fill(“done!”);
 			console.log(alphabets); // [“done!”,“done!”,“done!”,“done!”,“done!”]
 
-	filter() - creates a new array with every element in an array that passes a test.
+***filter() -*** creates a new array with every element in an array that passes a test.
 
 		Eg: 
 			var ages = [1,22,33,4,55];
@@ -1248,7 +1246,7 @@
 			})
 			console.log(everyResult);  // [55]
 
-	find() - returns the value of the first element in an array that passes a test, else returns undefined.
+***find() -*** returns the value of the first element in an array that passes a test, else returns undefined.
 
 		Eg:
 			var ages = [1,22,33,4,55];
@@ -1257,7 +1255,7 @@
 			})
 			console.log(everyResult);  // 22
 
-	findIndex() - returns the index of the first element in an array that passes a test
+***findIndex() -*** returns the index of the first element in an array that passes a test
 				
 		Eg:
 			var ages = [1,22,33,4,55];
@@ -1266,7 +1264,7 @@
 			})
 			console.log(everyResult);  // 1
 
-	forEach() - calls a function once for each element in an array
+***forEach() -*** calls a function once for each element in an array
 
 		Eg: 
 			var ages = [1,22,33,4,55];
@@ -1275,37 +1273,37 @@
 			})
 			console.log(everyResult);  // [10,32,43,14,65]
 
-     	from() - creates an array from an object with length property or an iterable object.
+***from() -*** creates an array from an object with length property or an iterable object.
 
 		Eg:
 			var a = Array.from(“abcdef”);
 			console.log(a); //[“a”,”b”,”c”,”d”,”e”,”f”];
 
-    	includes() - determines whether an array contains a specified element, returns true if element is present else 			     returns false.
+***includes() -*** determines whether an array contains a specified element, returns true if element is present else 			     returns false.
 				
 		Eg:
 			var fruits = [“orange”,”banana”,”apple”,”mango”];
 			console.log(fruits.includes(“banana”)); //true
 
-	indexOf() - searches an array for specified item and return its position, returns -1 if not found.
+***indexOf() -*** searches an array for specified item and return its position, returns -1 if not found.
 
 		Eg:
 			var fruits = [“orange”,”banana”,”apple”,”mango”];
 			console.log(fruits.indexOf(“banana”)); //1
 
-	isArray() - determines whether an object is an array or not, returns boolean value accordingly.
+***isArray() -*** determines whether an object is an array or not, returns boolean value accordingly.
 
 		Eg:
 			var fruits = [“orange”,”banana”,”apple”,”mango”];
 			console.log(Array.isArray(fruits)); //true
 
-	join() - returns the array as a string. The array elements are separated by comma, unless specified by another  symbol.
+***join() -*** returns the array as a string. The array elements are separated by comma, unless specified by another  symbol.
 
 		Eg:
 			var fruits =  [“orange”,”banana”,”apple”,”mango”];
 			console.log(fruits.join(“-”)); // orange-banana-apple-mango
 
-	keys() - returns an Array iterator object with the keys of an array.
+***keys() -*** returns an Array iterator object with the keys of an array.
 
 		Eg:
 			var fruits =  [“orange”,”banana”,”apple”,”mango”];
@@ -1315,26 +1313,26 @@
 				console.log(x);
 			}
 
-	map() - creates a new array with the results of a callback function for every element.
+***map() -*** creates a new array with the results of a callback function for every element.
 
 		Eg:
 			var a = [4,9,16,25];
 			var x = a.map(Math.sqrt);
 			console.log(x); //2,3,4,5
 
-	pop() - removes the last element of an array and returns the removed element.
+***pop() -*** removes the last element of an array and returns the removed element.
 
 		Eg:
 			var fruits = [“banana”,”orange”,”apple”,”mango”];
 			console.log(fruits.pop()); // mango
 			
-	push() - adds new items to the end of an array and returns the new length.
+***push() -*** adds new items to the end of an array and returns the new length.
 
 		Eg:
 			var fruits = [“banana”,”orange”,”apple”,”mango”];
 			console.log(fruits.push(“kiwi”)); // 5
 
-	reduce() - reduces an array to a single value. It executes a provided function for each value of the array (from left to right) and the return value of the function is stored in an accumulator.
+***reduce() -*** reduces an array to a single value. It executes a provided function for each value of the array (from left to right) and the return value of the function is stored in an accumulator.
 
 		Eg:
 			var numbers = [20,10,30];
@@ -1343,36 +1341,36 @@
 			}
 			console.log(numbers.reduce(providedFunc)); //60
 
-	reverse() - reverses the order of the elements in an array
+***reverse() -*** reverses the order of the elements in an array
 
 		Eg:
 			var fruits = [“banana”,”orange”,”apple”,”mango”];
 			console.log(fruits.reverse()); //[“mango”,”apple”,”orange”,”banana”]
 
-	shift() - removes the first item of an array, and returns the removed item.
+***shift() -*** removes the first item of an array, and returns the removed item.
 		
 		Eg:
 			var fruits = [“banana”,”orange”,”apple”,”mango”];
 			console.log(fruits.shift()); // banana
 
-	slice() - returns the selected elements in an array as a new array object, selects the elements starting at the given start argument and ends at, but does not include the given end argument.
+***slice() -*** returns the selected elements in an array as a new array object, selects the elements starting at the given start argument and ends at, but does not include the given end argument.
 
 		Eg:
 			var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 		console.log(fruits.slice(3, 4)); // Apple
 
-	sort() - sorts the items of an array. The sort order can be either alphabetic or numeric, or ascending/descending order. The sort function will produce incorrect results for numbers. For eg: 25 > 100 because 2 > 1 (if 		    numbers are sorted as strings)
+***sort() -*** sorts the items of an array. The sort order can be either alphabetic or numeric, or ascending/descending order. The sort function will produce incorrect results for numbers. For eg: 25 > 100 because 2 > 1 (if 		    numbers are sorted as strings)
 
 		Eg:
 			var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 		console.log(fruits.sort());  //[“Apple”,”Banana”,”Lemon”,”Mango”,”Orange”];
 
-	splice() - adds/removes items to/from an array, and returns the removed item(s).
+***splice() -*** adds/removes items to/from an array, and returns the removed item(s).
 		Eg:
 		var fruits = ["Banana", "Orange", "Mango"];
 		console.log(fruits.splice(2,0,”Lemon”,”Kiwi”));  //["Banana", "Orange", ”Lemon”,”Kiwi”,”Mango"]
 
-	unshift() - adds new items to the beginning of an array.
+***unshift() -*** adds new items to the beginning of an array.
 
 		Eg:
 		var fruits = ["Banana", "Orange", "Mango"];
@@ -1381,7 +1379,7 @@
 
 ## 34. Object methods list which you need to know.
 
-	assign() - copies all enumerable own properties from one or more source objects to a target object.
+***assign() -*** copies all enumerable own properties from one or more source objects to a target object.
 
 			Eg:
 				const target = { a: 1, b: 2};
@@ -1389,7 +1387,7 @@
 
 				const newObj = Object.assign(target, source); // {a:1,b:4,c:5}
 
-	create() - creates a new object, using an existing object as the prototype of the newly created object
+***create() -*** creates a new object, using an existing object as the prototype of the newly created object
 
 			Eg:
 				const obj1 = { name: ‘Ashwini’ };
@@ -1397,14 +1395,14 @@
 
 				console.log(newObj.name); //Ashwini
   
-	defineProperty() - defines a new property directly on an object, or modifies an existing property on an object and  returns the object.
+***defineProperty() -*** defines a new property directly on an object, or modifies an existing property on an object and  returns the object.
 
 			Eg:
 				const object1 = {};
 				object1.defineProperty(object1, ‘prop1’, { value: 200, writable: true});
 				console.log(object1.value); // 200
 
-	entries() - returns an array of a given object’s own enumerable keys and their values in two separate arrays i.e. [keys, values] in the same order as provided by a for…in loop.
+***entries() -*** returns an array of a given object’s own enumerable keys and their values in two separate arrays i.e. [keys, values] in the same order as provided by a for…in loop.
 			
 			Eg:
 				const object1= {
@@ -1414,7 +1412,7 @@
 
 				console.log(Object.entries(object1)); // [ [“a”,”b”], [“something”,42]]
 
-	freeze() - freezes an object and returns the same object. Freezing an object means (no existing property alteration, no new property addition, no prototype updation)
+***freeze() -*** freezes an object and returns the same object. Freezing an object means (no existing property alteration, no new property addition, no prototype updation)
 
 			Eg:
 				const obj = {
@@ -1423,7 +1421,7 @@
 				Object.freeze(obj);
 				obj.prop = 21; // throws an error.
 
-    	isFrozen() - determines if an object is frozen.
+***isFrozen() -*** determines if an object is frozen.
 			
 			Eg:
 				const obj1 = { prop: 42 };
@@ -1431,7 +1429,7 @@
 				Object.freeze(obj1);
 				console.log(Object.isFrozen(obj1)); //true
 				
-	fromEntries() - transforms a list of key-value pairs into an object
+***fromEntries() -*** transforms a list of key-value pairs into an object
 		
 			Eg:
 				const entriesFromMap = new Map([
@@ -1442,13 +1440,13 @@
 				const obj = Object.fromEntries(entriesFromMap);
 				console.log(obj); // {first: “firstValue”, second: “secondValue”}
 
-	getOwnPropertyNames() - returns an array of all properties (enumerable + non-enumerable except for symbol) of an  object.
+***getOwnPropertyNames() -*** returns an array of all properties (enumerable + non-enumerable except for symbol) of an  object.
 
 			Eg:
 				const obj1 = { a:1, b:2, c:3};
 				console.log(obj1); // [“a”,”b”,”c”];
 
-	getOwnPropertySymbols() - returns an array of all symbol properties of an object.
+***getOwnPropertySymbols() -*** returns an array of all symbol properties of an object.
 
 			Eg:
 				const obj1 = { kiwi: 102};
@@ -1457,14 +1455,14 @@
 
 				console.log(object.getOwnPropertySymbols(obj1)); // [Symbol(a)]
 
-	getPrototypeOf() - returns the prototype of the given object.
+***getPrototypeOf() -*** returns the prototype of the given object.
 
 			Eg:
 				const prototype1 = {};
 				const obj1 = Object.create(prototype1);
 				console.log( Object.prototype(obj1) === prototype1); // true
 
-	is() - determines whether the two given values are same or not. The two given values can be one of the following:
+***is() -*** determines whether the two given values are same or not. The two given values can be one of the following:
 			
 			1. both undefined
 			2. null
@@ -1477,7 +1475,7 @@
 				Object.is(“foo”, “foo”); //true
 				Object. is({a:1},{a:1}); //false	 as the two objects have different references.
 
-	isExtensible() - determines if the object is extensible or not( not sealed / not freezed)
+***isExtensible() -*** determines if the object is extensible or not( not sealed / not freezed)
 
 			Eg:
 				const obj = {};
@@ -1485,7 +1483,7 @@
 				Object.freeze(obj);
 				console.log(object.isExtensible(obj)) //false
 
-	seal() - seals an object. (no new property addition, no prototype updation) Existing properties values can be updated.
+***seal() -*** seals an object. (no new property addition, no prototype updation) Existing properties values can be updated.
 
 			Eg:
 				const obj = { kiwi: true};
@@ -1493,7 +1491,7 @@
 				obj.kiwi = false;
 				console.log(obj.kiwi); // false
 							
-	isSealed() - determines if the object is sealed or not
+***isSealed() -*** determines if the object is sealed or not
 			
 			Eg:
 				const obj = {a: 22};
@@ -1501,13 +1499,13 @@
 				Object.seal(obj);
 				console.log(Object.isSealed(obj)); //true    
 
-	keys() - returns an array of a object’s own enumerable property names.
+***keys() -*** returns an array of a object’s own enumerable property names.
 
 			Eg: 
 				const obj = { a: 1 , b: 2, c: 3};
 				console.log(Object.keys(obj)); // [“a”,”b”,”c”];
 
-	preventExtension() - prevents new properties to be added to an object
+***preventExtension() -*** prevents new properties to be added to an object
 
 			Eg:
 				const obj = {};
@@ -1518,7 +1516,7 @@
   			}); //error -  cannot define property property1, object is not extensible.
 
 
-	hasOwnProperty() - prevents a boolean indicating whether the given property is own property of the object( not an inherited one!)
+***hasOwnProperty() -*** prevents a boolean indicating whether the given property is own property of the object( not an inherited one!)
 
 			Eg:
 				const obj1 = {};
@@ -1529,7 +1527,7 @@
 				console.log(obj1.hasOwnProperty(“property1”)); //true
 				console.log(obj1.hasOwnProperty(“toString”)); //false
 
-	isPrototypeOf() - checks if an object exists in another object’s prototype chain
+***isPrototypeOf() -*** checks if an object exists in another object’s prototype chain
 
 			Eg:
 				function obj1() {};
@@ -1537,19 +1535,19 @@
 				
 				console.log(obj2.prototype.isPrototypeOf(obj2)); //true
 
-	setPrototypeOf - sets the prototype of the specified object by either another object or null
+***setPrototypeOf -*** sets the prototype of the specified object by either another object or null
 			
 			Eg:
 				var demo = Object.setPrototype({},null);
 				console.log(demo); // {} no properties
 
-	toString() - returns the string representing the object
+***toString() -*** returns the string representing the object
 
 			Eg:
 				var a = [1,2,3,4,5];
 				console.log(a.toString()); //“1,2,3,4,5”
 
-	values() - returns an array of object’s own enumerable property values.
+***values() -*** returns an array of object’s own enumerable property values.
 
 			Eg:
 				var a = {

@@ -195,7 +195,7 @@
 
 
 	
-	Benefits of currying:
+	***Benefits of currying:***
 	
 		If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to another piece of code that has more parameters and finish evaluating it there. 
 

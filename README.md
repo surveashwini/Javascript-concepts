@@ -38,13 +38,13 @@
 
 ## 7. What are the advantages of JavaScript?
 
-	1. Less server interaction − You can validate user input before sending the page off to the server. This saves server 		 traffic, which means less load on your server.
+	1. Less server interaction − You can validate user input before sending the page off to the server. This saves server  traffic, which means less load on your server.
 	
-	2. Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to    		 enter something.
+	2. Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to   enter something.
 	
-	3. Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or 	    activates them via the keyboard.
+	3. Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or  activates them via the keyboard.
 	
-	4. Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a 		 rich Interface to your site visitors.
+	4. Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a rich Interface to your site visitors.
 
 ## 8.Between JavaScript and an ASP script, which is faster?
 
@@ -158,7 +158,7 @@
 
 ## 14. What is variable shadowing? 
 
-	In JavaScript, variables with the same name can be specified at multiple layers of nested scope. In such case, local variables gain priority over global variables. If you have a local variable and a global variable with the same name, 	   the local variable will take precedence when you use it inside a function. This type of behavior is called Variable 		shadowing.
+	In JavaScript, variables with the same name can be specified at multiple layers of nested scope. In such case, local variables gain priority over global variables. If you have a local variable and a global variable with the same name,the local variable will take precedence when you use it inside a function. This type of behavior is called Variable shadowing.
 	
 	Eg:
 		function outer() {
@@ -197,7 +197,7 @@
 	
 	Benefits of currying:
 	
-		If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to                   another piece of code that has more parameters and finish evaluating it there. 
+		If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to another piece of code that has more parameters and finish evaluating it there. 
 
 	Eg: Multiple API responses used as different arguments in a curried function to accomplish a particular task.
 
@@ -520,7 +520,8 @@
 
     	    Call stack: All function calls will form a stack of frames
 
-    	    WebAPIs: The WebAPIs are built into your web browser. They are not part of the Javascript language itself, although they are built on top of the core Javascript language, which lets you to use them in your 		     Javascript code.
+    	    WebAPIs: The WebAPIs are built into your web browser. They are not part of the Javascript language itself, although they are built on top of the core Javascript language, which lets you to use them in your Javascript code.
+	    
       		     Eg: Canvas API, Fetch API, Geolocation API, HTML Drag and Drop API, Service Workers API
 
     	    Callback queue / message queue: The callback queue basically consists of all the callback functions in a queue. 
@@ -529,15 +530,15 @@
 
 	    Lets take an example to understand this better: 
 
-	    function mainMethod() {
-	      console.log(‘Well Hello from the mainMethod! ’);
-	      setTimeout(
-		function display() { console.log(’They are not gonna print me immediately!’)}
-	      ,0);
-	      console.log(‘Now this ends here!’)
-	    }
+		    function mainMethod() {
+		      console.log(‘Well Hello from the mainMethod! ’);
+		      setTimeout(
+			function display() { console.log(’They are not gonna print me immediately!’)}
+		      ,0);
+		      console.log(‘Now this ends here!’)
+		    }
 
-	    mainMethod();
+		    mainMethod();
 
     Architecture of the browser: 
 
@@ -548,7 +549,7 @@
 
       1. Firstly, when mainMethod() is called, it is pushed to the callStack as the first frame.
       
-      2. The execution flow then adds the first statement to the call stack. i.e. console.log(‘Well Hello from the                    mainMethod! ’);
+      2. The execution flow then adds the first statement to the call stack. i.e. console.log(‘Well Hello from the mainMethod! ’);
       
       3. Once the message has been logged into the console, the execution flows moves to the next statement. In this case,it is setTimeout method. As the setTimeout method has 0 milliseconds to wait for, irrespective of the duration, the WebAPIs will start the timer that will wait for 0 milliseconds. 
       
@@ -674,9 +675,9 @@
 			return true;
 		}
 		
-		var obj1 = new demo();				   // implementing inheritance
-		console.log(obj1.prototype);  			   // undefined
-		console.log(demo.prototype);  			   // returns an object containing constructor property 								      pointing to the actual method demo
+		var obj1 = new demo();	// implementing inheritance
+		console.log(obj1.prototype); // undefined
+		console.log(demo.prototype);  // returns an object containing constructor property 								      pointing to the actual method demo
 		console.log(demo === demo.prototype.constructor);  // true, as demo method is the return value of 									      demo.prototype.constructor.
 		
 		Functions will have __proto__ property that would contain the native code.
@@ -717,7 +718,7 @@
 		
 		var name;
 		this.name = carName;
-		Vehicle.call(this,"SUV");                         // Calling base class with call method, passing Car’s 								     context (“this”) and assigning category value as SUV
+		Vehicle.call(this,"SUV");  // Calling base class with call method, passing Car’s context (“this”) and assigning category value as SUV
 		
 		this.announceMe = function() {
 			return this.name;
@@ -725,24 +726,24 @@
 		return this;
 	}
 
-	Car.prototype = Vehicle.prototype;             		 // assigning prototype of Vehicle to Car
+	Car.prototype = Vehicle.prototype; // assigning prototype of Vehicle to Car
 	
-	var v1 = new Vehicle("TVS");                     	 // creating new instance of Vehicle, hence all properties 								    defined in Vehicle will be accessible in v1 variable.
+	var v1 = new Vehicle("TVS");  // creating new instance of Vehicle, hence all properties defined in Vehicle will be accessible in v1 variable.
 	
-	v1.announceMe();                                         // v1 instance able to access behavior of Vehicle
+	v1.announceMe(); // v1 instance able to access behavior of Vehicle
 	
-	var c1 = new Car("XUV");                                 // creating new instance of Car, hence all properties 									 defined in Car and also in Vehicle will be accessible in c1 								      variable. The reason behind this is Car’s prototype is 									 pointed to Vehicle’s prototype. So the properties and 									 behaviors defined in Vehicle prototype will be available to 								      c1 instance.
+	var c1 = new Car("XUV");  // creating new instance of Car, hence all properties defined in Car and also in Vehicle will be accessible in c1 variable. The reason behind this is Car’s prototype is pointed to Vehicle’s prototype. So the properties and behaviors defined in Vehicle prototype will be available to c1 instance.
 	
-	c1.announceMe();                                     	// prints XUV
+	c1.announceMe(); // prints XUV
 	
-	console.log(c1.category);                          	// prints SUV
+	console.log(c1.category); // prints SUV
 
 	
 	But the above example has one flaw, if you try to manipulate the Car prototype, it also gets reflected in Vehicle 	  prototype, because of the following line. 
 	
 		Car.prototype = Vehicle.prototype;  
 		
-	For Eg, you try to add new behavior to Car.prototype, it will also be added to Vehicle.prototype and be available to         all the instances created from Vehicle, like v1.
+	For Eg, you try to add new behavior to Car.prototype, it will also be added to Vehicle.prototype and be available to all the instances created from Vehicle, like v1.
 
 	To avoid this, you just have to replace the following code:
 
@@ -773,7 +774,7 @@
 		var name;
 		this.name = carName;
 		
-		//Vehicle.call(this,"SUV");             // Removing this code as the category initialization is 								done with the replaced code itself.
+		//Vehicle.call(this,"SUV"); // Removing this code as the category initialization is done with the replaced code itself.
 		
 		this.announceMe = function() {
 			return this.name;
@@ -782,13 +783,13 @@
 		return this;
 	}
 
-	Car.prototype = new Vehicle("SUV");           // This also initializes the category property of Vehicle class.
+	Car.prototype = new Vehicle("SUV"); // This also initializes the category property of Vehicle class.
 	
 	var v1 = new Vehicle("TVS");
 	v1.announceMe(); 
 	var c1 = new Car("XUV");
 	c1.announceMe();
-	console.log(c1.category);                     // SUV
+	console.log(c1.category); // SUV
 
 
 
@@ -887,7 +888,7 @@
 
 				}
 
-				// Instead of defining the isCar method in the function definition, we are associating it 				  with the Vehicle’s prototype, this will share only one copy of isCar across all instances of 				       Vehicle, i.e. bmw and activa.
+				// Instead of defining the isCar method in the function definition, we are associating it   with the Vehicle’s prototype, this will share only one copy of isCar across all instances of Vehicle, i.e. bmw and activa.
  
 				Vehicle.prototype.isCar = function() {
 					console.log(this.noOfWheels === 4 ? “Yes”: “No”);
@@ -938,7 +939,7 @@
 				moduleDemo.addValue(6);
 				moduleDemo.removeValue(1);
 				moduleDemo.getValues();
-				console.log(moduleDemo.privateArr); // privateVar wont be accessible here as the IIFE is 								       already returned here. Although the closures addValue, 									    removeValue and getValues are still able to access the 									 privateVar of IIFE.
+				console.log(moduleDemo.privateArr); // privateVar wont be accessible here as the IIFE is already returned here. Although the closures addValue, removeValue and getValues are still able to access the privateVar of IIFE.
 
 				Module pattern introduces the separation of private and public parts of an object.
 
@@ -1088,7 +1089,7 @@
 
 ## 31. Explain Event bubbling and Event capturing.
 
-	Events:  Functionally speaking, when a user interacts with a webpage an event occurs. For eg: clicking on a search button, selecting a menu or typing into an input box of a form. All these interactions are considered as events. 		Javascript provides us ways to catch these events and add behavior to the application in response to these events.
+	Events:  Functionally speaking, when a user interacts with a webpage an event occurs. For eg: clicking on a search button, selecting a menu or typing into an input box of a form. All these interactions are considered as events. Javascript provides us ways to catch these events and add behavior to the application in response to these events.
 
 	Event flow: Event flow is the order in which the event is received on the web page. There are two types of event flow:
 
@@ -1221,7 +1222,7 @@
 			var children = array1.concat(array2);
 
 			
-	every() - checks if every element in an array pass a test. If it finds an array element which fails the test, every() 			returns false and stops execution else returns true
+	every() - checks if every element in an array pass a test. If it finds an array element which fails the test, every() returns false and stops execution else returns true
 				
 		Eg: 
 			var ages = [1,22,33,4,55];
@@ -1298,7 +1299,7 @@
 			var fruits = [“orange”,”banana”,”apple”,”mango”];
 			console.log(Array.isArray(fruits)); //true
 
-	join() - returns the array as a string. The array elements are separated by comma, unless specified by another 			 symbol.
+	join() - returns the array as a string. The array elements are separated by comma, unless specified by another  symbol.
 
 		Eg:
 			var fruits =  [“orange”,”banana”,”apple”,”mango”];
@@ -1396,7 +1397,7 @@
 
 				console.log(newObj.name); //Ashwini
   
-	defineProperty() - defines a new property directly on an object, or modifies an existing property on an object and 			      returns the object.
+	defineProperty() - defines a new property directly on an object, or modifies an existing property on an object and  returns the object.
 
 			Eg:
 				const object1 = {};
@@ -1441,7 +1442,7 @@
 				const obj = Object.fromEntries(entriesFromMap);
 				console.log(obj); // {first: “firstValue”, second: “secondValue”}
 
-	getOwnPropertyNames() - returns an array of all properties (enumerable + non-enumerable except for symbol) of an 				 object.
+	getOwnPropertyNames() - returns an array of all properties (enumerable + non-enumerable except for symbol) of an  object.
 
 			Eg:
 				const obj1 = { a:1, b:2, c:3};
@@ -1484,7 +1485,7 @@
 				Object.freeze(obj);
 				console.log(object.isExtensible(obj)) //false
 
-	seal() - seals an object. (no new property addition, no prototype updation) Existing properties values can be 	updated.
+	seal() - seals an object. (no new property addition, no prototype updation) Existing properties values can be updated.
 
 			Eg:
 				const obj = { kiwi: true};

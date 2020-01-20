@@ -59,20 +59,24 @@
 	Breaking within a string statement can be done by the use of a backslash, '\', at the end of the first line
 	
 ***Eg:***
-	      	  document.write("This is \a demo to show how to break a string using a backslash“);
+	  document.write("This is \a demo to show how to break a string using a backslash“);
 	      
 ***Eg:***
-		  var a=1, b=2,
-		  c=
-		  a+b;
-	      
-	  The above code is perfectly fine, though not advisable.
+	  var a=1, b=2,
+
+	  c=
+
+	  a+b;
+
+
+  	The above code is perfectly fine, though not advisable.
 
 ## 11. How can you create an object in JavaScript?
 
 	  Javascript allows you to create objects by using following methods:
 
 ***Using function as a class :*** 
+
 		
 			function createInstanceFromClass(prop1, prop2) {
 				this.prop1 = prop1;
@@ -84,7 +88,8 @@
 			var obj1 = new createInstanceFromClass(‘testProp1’,’testProp2’);
 			obj1.logInfo();
 
-***Using Object literals: ***
+***Using Object literals:***
+
 		
 			var obj1 = { 
 			       prop1 : “prop1”, 
@@ -96,7 +101,8 @@
 			obj1.prop2 = “Updated prop2”;
 			obj1.logInfo();
 
-***Using Object.create (): ***
+***Using Object.create ():***
+
 
 			The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
 			Eg :
@@ -137,21 +143,27 @@
 	Scoping means determining where variables, functions and objects are accessible in your code.
 	
 ***Types:***
+
 		1. Global
+		
 		2. Local
 		
 ***Global:***
+
 		A variable can be termed as global variable if its defined outside of a function. A global variable can be accessed from any other scope.
 		
 ***Local:***
+
 		A variable can be termed as local variable if its defined inside a function. A local variable is accessed only within the function in which they are defined. This allows us to create variables that have the same name and can be used in different functions (also termed as variable shadowing).
 
 ***Types:***
 		
    ***Block level:***
+   
 	When variable declared with var keyword within block level scope, it is accessible from the global scope, but is hoisted with undefined value.
 				
    ***Function level:***
+   
 	While, when variable declared with var keyword within the function scope, the variable has its scope limited to that function only.
 
 ## 14. What is variable shadowing? 
@@ -159,6 +171,7 @@
 	In JavaScript, variables with the same name can be specified at multiple layers of nested scope. In such case, local variables gain priority over global variables. If you have a local variable and a global variable with the same name,the local variable will take precedence when you use it inside a function. This type of behavior is called Variable shadowing.
 	
 ***Eg:***
+
 		function outer() {
 			var outerVar = 2;
 			function inner() {
@@ -170,8 +183,11 @@
 ## 15. Explain Currying.
 
 	Currying is a process in which we can transform a function with multiple arguments into a sequence of nesting functions,each taking a single argument. The number of nested functions depends on the number of arguments the curried function receives. Nested functions are closures.
-	Eg: 
-		Normal function : 
+	
+***Eg:***
+
+   ***Normal function :***
+   
 		
 			function mul(a, b, c) {
 				    return a * b * c;
@@ -179,7 +195,8 @@
 
 			Usage : mul(1,2,3);
 
-		Curried function: 
+   ***Curried function:***
+   
 		
 			function mul(a) {
 				return (b) => {
@@ -195,7 +212,7 @@
 
  ***Benefits of currying:***  
 	
-		If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to another piece of code that has more parameters and finish evaluating it there. 
+	If you have a multi-parameter function, and you don’t receive all of the parameters needed to evaluate it in one place in the code, you can simply apply one or more parameters when you get them and pass the result to another piece of code that has more parameters and finish evaluating it there. 
 
 	Eg: Multiple API responses used as different arguments in a curried function to accomplish a particular task.
 
@@ -225,19 +242,23 @@
 	
 	A lexical environment is a data structure that holds the mapping of the name of the variable or function and its reference. (The reference would be actual object [including the function object] or primitive value).
 	
-	Representation: 
+***Representation:*** 
+
 		LexicalEnvironment = {
 			Identifier:  <value>,
 			Identifier:  <function object>
 		}
+	
 	All declarations (function, var, let, const and class) are hoisted in JavaScript.
       
 	      1. When var is hoisted, JS assigns an undefined value to it.
+	      
 		Eg:
 		     console.log(a); // outputs 'undefined'
 		     var a = 3;
 
 	      2. When function is hoisted, JS assigns function reference to it.
+	      
 		Eg:
 		    helloWorld();  // prints 'Hello World!' to the console
 		    function helloWorld() {
@@ -255,6 +276,7 @@
 		 
 		 Eg:
 		    1. let & const : 
+		    
 			 console.log(a , b); // ReferenceError: a, b is not defined
 			 let a = 3;
 			 const b = 2;
@@ -305,9 +327,11 @@
         A time span between variable creation and its initialization where they can’t be accessed is Temporal Dead Zone. This means we can’t access the variable before the JS engine evaluates its value at the place it was declared in the  source code. Temporal dead zone applies to class and variables declared with let, const keywords.
 
 ## 19. Explain Higher order functions.
+
 	A higher-order function is a function that either *takes a function as one of its parameters or *returns another function.
 	
 	Eg: Array.map method is one of the most common higher-order functions. Array.map method takes a function that will be executed on every item in the array. Then it returns a modified copy of the original array.
+	
 
 	function map(array, func) {
 		let copy = [];
@@ -831,22 +855,25 @@ Now, Let us understand how inheritance can be achieved with object and with func
 
 ***Eg:***
 
-		Let us understand how a promise is being created.
 
-		var promise = new Promise(function(resolve, reject) {
-			if(/*anything*/) {	// if asynchronous function is successfully completed
-				resolve(‘response to be sent or a success message’)
-			}
-			else {	// if asynchronous function throws an error
-				reject(Error(‘message’))
-			}	
-		})
+	Let us understand how a promise is being created.
+
+	var promise = new Promise(function(resolve, reject) {
+		if(/*anything*/) {	// if asynchronous function is successfully completed
+			resolve(‘response to be sent or a success message’)
+		}
+		else {	// if asynchronous function throws an error
+			reject(Error(‘message’))
+		}	
+	})
+	
 
 	Now with the reference of above example, “promise” object is an instance of Promise, will contain a then method, that will contain successful or failure callbacks. This can be demonstrated like this:
 
-		promise.then(successCallback, failureCallback);
+	promise.then(successCallback, failureCallback);
+		
 
-	Eg: 
+***Eg:***
 
 		var promiseObj = new Promise(function(){
 			var twistValue = true;
@@ -899,7 +926,7 @@ Now, Let us understand how inheritance can be achieved with object and with func
 			bmw.isCar();         // Yes	
 			activa.isCar();       // No
 
-***2. Module pattern : ***
+***2. Module pattern :***
 
 	 So before deep diving into Module pattern, we need to understand two concepts:
 

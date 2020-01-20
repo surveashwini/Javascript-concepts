@@ -62,6 +62,8 @@
 	  document.write("This is \a demo to show how to break a string using a backslash“);
 	      
 ***Eg:***
+
+
 	  var a=1, b=2,
 
 	  c=
@@ -156,7 +158,7 @@
 
 		A variable can be termed as local variable if its defined inside a function. A local variable is accessed only within the function in which they are defined. This allows us to create variables that have the same name and can be used in different functions (also termed as variable shadowing).
 
-***Types:***
+   ***Types:***
 		
    ***Block level:***
    

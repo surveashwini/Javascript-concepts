@@ -1226,7 +1226,7 @@ Now, Let us understand how inheritance can be achieved with object and with func
 		  return (value) => {
 			if (value in cache) {
 				console.log('Fetching from cache');
-				return cache[value]; // Here, cache.value cannot be used as property name starts with the 							  number which is not valid JavaScript  identifier. Hence, can only be 							       accessed using the square bracket notation.
+				return cache[value]; // Here, cache.value cannot be used as property name starts with the number which is not valid JavaScript  identifier. Hence, can only be accessed using the square bracket notation.
 			}
 			else {
 				console.log('Calculating result');
@@ -1330,7 +1330,7 @@ Now, Let us understand how inheritance can be achieved with object and with func
 			var fruits = [“orange”,”banana”,”apple”,”mango”];
 			console.log(Array.isArray(fruits)); //true
 
-***join() -*** returns the array as a string. The array elements are separated by comma, unless specified by another  symbol.
+***join() -*** returns the array as a string. The array elements are separated by comma, unless specified by another symbol.
 
 		Eg:
 			var fruits =  [“orange”,”banana”,”apple”,”mango”];

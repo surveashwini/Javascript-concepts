@@ -566,7 +566,7 @@
 
 ***Architecture of the browser:*** 
 
-
+![](images/asynchronousJS.jpeg)
  ￼
 
 ***Execution work flow:*** 
@@ -706,9 +706,13 @@ Now, Let us understand how inheritance can be achieved with object and with func
 		
 	Functions will have __proto__ property that would contain the native code.
 		
-	Prototypal inheritance can be demonstrated as follows:
+	
+	
+## Prototypal inheritance can be demonstrated as follows:
 
 	
+	
+![](images/prototypalinheritance.jpeg)
 
 ￼
 
